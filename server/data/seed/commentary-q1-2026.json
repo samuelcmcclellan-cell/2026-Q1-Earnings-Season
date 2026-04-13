@@ -1,0 +1,314 @@
+[
+  {
+    "ticker": "GS",
+    "fiscal_quarter": "Q1 2026",
+    "quote_text": "Our FICC and equities businesses delivered their strongest first quarter in over a decade, driven by elevated client activity amid heightened macro volatility and ongoing portfolio repositioning across institutional accounts.",
+    "theme_tags": "[\"capital_markets\", \"competitive_dynamics\"]",
+    "sentiment": "positive",
+    "source": "Q1 2026 Earnings Call"
+  },
+  {
+    "ticker": "GS",
+    "fiscal_quarter": "Q1 2026",
+    "quote_text": "We are seeing a meaningful inflection in M&A advisory as boardrooms gain confidence. Our pipeline of AI-related mandates has tripled year-over-year, spanning semiconductor supply chain restructurings, data center infrastructure financing, and large-scale cloud platform partnerships.",
+    "theme_tags": "[\"capital_markets\", \"ai_capex\", \"competitive_dynamics\"]",
+    "sentiment": "positive",
+    "source": "Q1 2026 Earnings Call"
+  },
+  {
+    "ticker": "GS",
+    "fiscal_quarter": "Q1 2026",
+    "quote_text": "Capital markets activity should continue to benefit from the normalization of the rate environment, though the recent tariff announcements have introduced some near-term uncertainty that could delay certain cross-border transactions.",
+    "theme_tags": "[\"capital_markets\", \"tariff_impact\", \"guidance\"]",
+    "sentiment": "neutral",
+    "source": "Q1 2026 Earnings Call"
+  },
+  {
+    "ticker": "GS",
+    "fiscal_quarter": "Q1 2026",
+    "quote_text": "Our asset and wealth management division gathered twenty-six billion in long-term fee-based net inflows during the quarter. We are selectively scaling our alternatives franchise while maintaining capital discipline, and our fundraising pipeline in private credit and infrastructure remains highly constructive.",
+    "theme_tags": "[\"capital_allocation\", \"competitive_dynamics\"]",
+    "sentiment": "positive",
+    "source": "Q1 2026 Earnings Call"
+  },
+  {
+    "ticker": "GS",
+    "fiscal_quarter": "Q1 2026",
+    "quote_text": "Regulatory clarity on bank capital requirements has improved our visibility into capital return capacity. We repurchased two point eight billion of common stock in Q1 and expect to maintain an elevated pace of buybacks through the year, subject to the macro environment.",
+    "theme_tags": "[\"regulatory\", \"capital_allocation\", \"guidance\"]",
+    "sentiment": "positive",
+    "source": "Q1 2026 Earnings Call"
+  },
+  {
+    "ticker": "JPM",
+    "fiscal_quarter": "Q1 2026",
+    "quote_text": "Consumer credit quality remains broadly healthy. Delinquency rates in our card portfolio are stabilizing after the normalization cycle, and we see no evidence of broad-based consumer distress despite pockets of softness in lower-income cohorts.",
+    "theme_tags": "[\"consumer_health\", \"credit\"]",
+    "sentiment": "neutral",
+    "source": "Q1 2026 Earnings Call"
+  },
+  {
+    "ticker": "JPM",
+    "fiscal_quarter": "Q1 2026",
+    "quote_text": "Net interest income came in at the high end of our guided range, benefiting from balance sheet optimization and a favorable deposit mix shift. We expect NII to remain resilient through the remainder of the year even as the Fed continues its measured easing path.",
+    "theme_tags": "[\"margin_trend\", \"guidance\"]",
+    "sentiment": "positive",
+    "source": "Q1 2026 Earnings Call"
+  },
+  {
+    "ticker": "JPM",
+    "fiscal_quarter": "Q1 2026",
+    "quote_text": "We are deploying AI at scale across the firm, from fraud detection models that have reduced false positives by forty percent to large language model copilots that are accelerating our software development velocity. Our technology spend this year will exceed seventeen billion dollars.",
+    "theme_tags": "[\"ai_capex\", \"competitive_dynamics\"]",
+    "sentiment": "positive",
+    "source": "Q1 2026 Earnings Call"
+  },
+  {
+    "ticker": "JPM",
+    "fiscal_quarter": "Q1 2026",
+    "quote_text": "The probability of a recession has risen but it is not our base case. Tariff-related uncertainty is the primary risk factor, and we are stress-testing our portfolios against a range of trade escalation scenarios. The consumer is still spending, but sentiment has softened meaningfully.",
+    "theme_tags": "[\"tariff_impact\", \"consumer_health\", \"guidance\"]",
+    "sentiment": "negative",
+    "source": "Q1 2026 Earnings Call"
+  },
+  {
+    "ticker": "JPM",
+    "fiscal_quarter": "Q1 2026",
+    "quote_text": "Our commercial and investment bank generated record markets revenue, with equities up twenty-one percent year-over-year. Client engagement across derivatives, prime brokerage, and securitized products was exceptionally strong as investors repositioned around the new tariff landscape.",
+    "theme_tags": "[\"capital_markets\", \"tariff_impact\", \"competitive_dynamics\"]",
+    "sentiment": "positive",
+    "source": "Q1 2026 Earnings Call"
+  },
+  {
+    "ticker": "WFC",
+    "fiscal_quarter": "Q1 2026",
+    "quote_text": "The mortgage origination market showed early signs of recovery as rates stabilized in the mid-sixes. Refinancing volumes are still well below historical norms, but purchase activity has picked up in key markets and our pipeline entering Q2 is the strongest in five quarters.",
+    "theme_tags": "[\"consumer_health\", \"guidance\"]",
+    "sentiment": "positive",
+    "source": "Q1 2026 Earnings Call"
+  },
+  {
+    "ticker": "WFC",
+    "fiscal_quarter": "Q1 2026",
+    "quote_text": "We reduced our efficiency ratio to fifty-nine percent this quarter, ahead of schedule on our multi-year target. Headcount optimization and branch consolidation remain key levers, and we expect further improvement through the back half of the year as technology investments begin to yield operating savings.",
+    "theme_tags": "[\"margin_trend\", \"workforce\", \"guidance\"]",
+    "sentiment": "positive",
+    "source": "Q1 2026 Earnings Call"
+  },
+  {
+    "ticker": "WFC",
+    "fiscal_quarter": "Q1 2026",
+    "quote_text": "Commercial real estate remains the area we are watching most closely. Our office exposure is manageable and has been proactively marked, but we do expect some incremental reserve builds in Q2 as select metropolitan markets continue to adjust valuations downward.",
+    "theme_tags": "[\"consumer_health\", \"guidance\"]",
+    "sentiment": "negative",
+    "source": "Q1 2026 Earnings Call"
+  },
+  {
+    "ticker": "WFC",
+    "fiscal_quarter": "Q1 2026",
+    "quote_text": "We continue to operate under the asset cap, and our ongoing engagement with regulators gives us confidence that we are making the right investments in risk infrastructure. Lifting the cap remains a top priority, and we believe we are closer to resolution than at any prior point.",
+    "theme_tags": "[\"regulatory\", \"guidance\"]",
+    "sentiment": "neutral",
+    "source": "Q1 2026 Earnings Call"
+  },
+  {
+    "ticker": "C",
+    "fiscal_quarter": "Q1 2026",
+    "quote_text": "Our international franchise delivered double-digit revenue growth, with particular strength in Asia and the Middle East. Cross-border transaction volumes accelerated as multinational corporates diversified supply chains away from concentrated sourcing, which plays directly to our global network advantages.",
+    "theme_tags": "[\"competitive_dynamics\", \"supply_chain\", \"china_exposure\"]",
+    "sentiment": "positive",
+    "source": "Q1 2026 Earnings Call"
+  },
+  {
+    "ticker": "C",
+    "fiscal_quarter": "Q1 2026",
+    "quote_text": "We completed the exit of nine consumer markets during the quarter, bringing total divestitures since the strategy refresh to fourteen. The simplification is freeing up capital and management bandwidth, and we are on track to achieve our medium-term return on tangible common equity target of eleven to twelve percent.",
+    "theme_tags": "[\"capital_allocation\", \"margin_trend\"]",
+    "sentiment": "positive",
+    "source": "Q1 2026 Earnings Call"
+  },
+  {
+    "ticker": "C",
+    "fiscal_quarter": "Q1 2026",
+    "quote_text": "Trade finance revenues were up sharply as clients restructured supply chains in response to the new tariff regime. However, we are cautious about the potential for retaliatory measures that could dampen overall trade volumes in the second half of the year.",
+    "theme_tags": "[\"tariff_impact\", \"supply_chain\", \"guidance\"]",
+    "sentiment": "neutral",
+    "source": "Q1 2026 Earnings Call"
+  },
+  {
+    "ticker": "C",
+    "fiscal_quarter": "Q1 2026",
+    "quote_text": "Regulatory and compliance transformation remains a critical workstream. We are investing heavily in data governance and risk controls, and while these investments depress near-term returns, they are essential to achieving sustainable operating leverage as the organization simplifies.",
+    "theme_tags": "[\"regulatory\", \"margin_trend\", \"capital_allocation\"]",
+    "sentiment": "negative",
+    "source": "Q1 2026 Earnings Call"
+  },
+  {
+    "ticker": "BAC",
+    "fiscal_quarter": "Q1 2026",
+    "quote_text": "Consumer spending through our card and digital platforms grew seven percent year-over-year in Q1. Travel and dining categories remain robust, while discretionary retail has moderated somewhat. Importantly, payment rates are holding steady, which tells us consumers are managing their balance sheets prudently.",
+    "theme_tags": "[\"consumer_health\", \"competitive_dynamics\"]",
+    "sentiment": "positive",
+    "source": "Q1 2026 Earnings Call"
+  },
+  {
+    "ticker": "BAC",
+    "fiscal_quarter": "Q1 2026",
+    "quote_text": "We now have over forty-eight million active digital users, up eleven percent year-over-year, and Erica interactions surpassed two point five billion cumulative. Our AI-enhanced digital assistant is driving measurably higher client engagement and lower servicing costs per household.",
+    "theme_tags": "[\"ai_capex\", \"competitive_dynamics\", \"margin_trend\"]",
+    "sentiment": "positive",
+    "source": "Q1 2026 Earnings Call"
+  },
+  {
+    "ticker": "BAC",
+    "fiscal_quarter": "Q1 2026",
+    "quote_text": "The forward curve implies further rate reductions, which will pressure NII modestly in the near term, but our asset sensitivity has been substantially reduced through hedging. We are well positioned for a range of rate scenarios and do not expect NII to be a significant headwind in 2026.",
+    "theme_tags": "[\"margin_trend\", \"guidance\"]",
+    "sentiment": "neutral",
+    "source": "Q1 2026 Earnings Call"
+  },
+  {
+    "ticker": "BAC",
+    "fiscal_quarter": "Q1 2026",
+    "quote_text": "Small business lending activity accelerated in Q1, particularly in healthcare and professional services. Our streamlined digital origination platform is reducing time-to-close by thirty percent and we are gaining share in the under one million dollar loan segment.",
+    "theme_tags": "[\"consumer_health\", \"competitive_dynamics\", \"ai_capex\"]",
+    "sentiment": "positive",
+    "source": "Q1 2026 Earnings Call"
+  },
+  {
+    "ticker": "MS",
+    "fiscal_quarter": "Q1 2026",
+    "quote_text": "Wealth management delivered record net new assets of sixty-three billion dollars in Q1, driven by strong advisor-led flows and continued momentum in our workplace channel. Client assets surpassed seven point two trillion, and our pre-tax margin expanded to twenty-nine percent.",
+    "theme_tags": "[\"competitive_dynamics\", \"margin_trend\"]",
+    "sentiment": "positive",
+    "source": "Q1 2026 Earnings Call"
+  },
+  {
+    "ticker": "MS",
+    "fiscal_quarter": "Q1 2026",
+    "quote_text": "The IPO backlog is substantial and diversified across sectors. We led several marquee offerings in Q1 and the pipeline for Q2 and Q3 is robust, particularly in technology and healthcare. That said, window sensitivity is elevated given tariff-driven volatility, and some issuers are adopting a wait-and-see posture.",
+    "theme_tags": "[\"capital_markets\", \"tariff_impact\", \"guidance\"]",
+    "sentiment": "neutral",
+    "source": "Q1 2026 Earnings Call"
+  },
+  {
+    "ticker": "MS",
+    "fiscal_quarter": "Q1 2026",
+    "quote_text": "AI infrastructure is generating the largest wave of strategic advisory mandates we have seen since the cloud transformation cycle. We are advising on hyperscaler partnerships, semiconductor joint ventures, and energy procurement deals that are critical to scaling AI compute capacity globally.",
+    "theme_tags": "[\"ai_capex\", \"capital_markets\", \"competitive_dynamics\"]",
+    "sentiment": "positive",
+    "source": "Q1 2026 Earnings Call"
+  },
+  {
+    "ticker": "MS",
+    "fiscal_quarter": "Q1 2026",
+    "quote_text": "Fixed income underwriting had a standout quarter as corporate issuers took advantage of relatively tight credit spreads to refinance and extend maturities. We expect sustained issuance volumes given the wall of debt maturing over the next two years.",
+    "theme_tags": "[\"capital_markets\", \"guidance\"]",
+    "sentiment": "positive",
+    "source": "Q1 2026 Earnings Call"
+  },
+  {
+    "ticker": "TSM",
+    "fiscal_quarter": "Q1 2026",
+    "quote_text": "Demand for our three-nanometer and advanced packaging technologies continues to significantly exceed available capacity, driven almost entirely by AI accelerator and high-performance computing applications. We expect AI-related revenue to more than double year-over-year in 2026.",
+    "theme_tags": "[\"ai_capex\", \"pricing_power\", \"guidance\"]",
+    "sentiment": "positive",
+    "source": "Q1 2026 Earnings Call"
+  },
+  {
+    "ticker": "TSM",
+    "fiscal_quarter": "Q1 2026",
+    "quote_text": "Our 2026 capital expenditure plan of thirty-eight to forty-two billion dollars reflects the unprecedented demand environment. The vast majority is directed toward leading-edge nodes and advanced packaging, particularly CoWoS capacity, which remains the primary bottleneck for AI chip deployment.",
+    "theme_tags": "[\"ai_capex\", \"capital_allocation\", \"supply_chain\"]",
+    "sentiment": "positive",
+    "source": "Q1 2026 Earnings Call"
+  },
+  {
+    "ticker": "TSM",
+    "fiscal_quarter": "Q1 2026",
+    "quote_text": "Construction of our Arizona fab is progressing on schedule, with volume production expected to begin in late 2026. The facility will serve both commercial and government customers, and we have received strong interest from US-based design partners seeking geographic supply chain diversification.",
+    "theme_tags": "[\"supply_chain\", \"regulatory\", \"capital_allocation\"]",
+    "sentiment": "positive",
+    "source": "Q1 2026 Earnings Call"
+  },
+  {
+    "ticker": "TSM",
+    "fiscal_quarter": "Q1 2026",
+    "quote_text": "The evolving US export control framework continues to create complexity for certain customer engagements. While our direct revenue impact from restricted shipments has been limited to low single-digit percentages, the broader geopolitical environment requires us to maintain flexibility in our capacity allocation planning.",
+    "theme_tags": "[\"china_exposure\", \"regulatory\", \"tariff_impact\"]",
+    "sentiment": "negative",
+    "source": "Q1 2026 Earnings Call"
+  },
+  {
+    "ticker": "TSM",
+    "fiscal_quarter": "Q1 2026",
+    "quote_text": "Gross margin expanded to fifty-nine percent in Q1, reflecting favorable product mix toward leading-edge nodes and disciplined pricing on advanced packaging services. We expect margins to remain in the fifty-seven to fifty-nine percent range for the full year.",
+    "theme_tags": "[\"margin_trend\", \"pricing_power\", \"guidance\"]",
+    "sentiment": "positive",
+    "source": "Q1 2026 Earnings Call"
+  },
+  {
+    "ticker": "SSNLF",
+    "fiscal_quarter": "Q1 2026",
+    "quote_text": "Our HBM3E shipments ramped aggressively in Q1, and we have secured substantial supply agreements with leading AI chip designers extending through 2027. High-bandwidth memory now represents our fastest-growing product line and carries accretive margins relative to our legacy DRAM portfolio.",
+    "theme_tags": "[\"ai_capex\", \"pricing_power\", \"margin_trend\"]",
+    "sentiment": "positive",
+    "source": "Q1 2026 Earnings Call"
+  },
+  {
+    "ticker": "SSNLF",
+    "fiscal_quarter": "Q1 2026",
+    "quote_text": "The smartphone market is recovering more gradually than we initially anticipated, with replacement cycles still extended in developed markets. However, we are seeing improving sell-through in emerging markets and expect the launch of our next flagship series to catalyze an upgrade cycle in the second half.",
+    "theme_tags": "[\"consumer_health\", \"guidance\", \"competitive_dynamics\"]",
+    "sentiment": "neutral",
+    "source": "Q1 2026 Earnings Call"
+  },
+  {
+    "ticker": "SSNLF",
+    "fiscal_quarter": "Q1 2026",
+    "quote_text": "Consolidated operating margins expanded three hundred basis points year-over-year as the memory upcycle gained momentum and our foundry business reduced underutilization charges. We are targeting mid-teens operating margins for the full year, which would represent a significant recovery from the trough.",
+    "theme_tags": "[\"margin_trend\", \"guidance\", \"capital_allocation\"]",
+    "sentiment": "positive",
+    "source": "Q1 2026 Earnings Call"
+  },
+  {
+    "ticker": "SSNLF",
+    "fiscal_quarter": "Q1 2026",
+    "quote_text": "Our foundry services division is ramping gate-all-around technology at the two-nanometer node, with initial production yields tracking ahead of plan. We have line-of-sight to multiple design wins that should contribute meaningful revenue beginning in 2027, helping narrow the gap with the market leader.",
+    "theme_tags": "[\"competitive_dynamics\", \"ai_capex\", \"guidance\"]",
+    "sentiment": "positive",
+    "source": "Q1 2026 Earnings Call"
+  },
+  {
+    "ticker": "BLK",
+    "fiscal_quarter": "Q1 2026",
+    "quote_text": "We generated over one hundred billion dollars of total net inflows in Q1, led by iShares ETF flows that benefited from continued rotation into fixed income and a broadening of equity allocations beyond US mega-cap technology. Our market share in ETFs reached thirty-four percent globally.",
+    "theme_tags": "[\"competitive_dynamics\", \"capital_markets\"]",
+    "sentiment": "positive",
+    "source": "Q1 2026 Earnings Call"
+  },
+  {
+    "ticker": "BLK",
+    "fiscal_quarter": "Q1 2026",
+    "quote_text": "Our alternatives platform crossed four hundred billion in assets under management, driven by strong fundraising in infrastructure and private credit. Institutional allocators are structurally increasing their exposure to private markets, and our acquisition of GIP has positioned us as a top-tier infrastructure manager.",
+    "theme_tags": "[\"competitive_dynamics\", \"capital_allocation\"]",
+    "sentiment": "positive",
+    "source": "Q1 2026 Earnings Call"
+  },
+  {
+    "ticker": "BLK",
+    "fiscal_quarter": "Q1 2026",
+    "quote_text": "Aladdin's AI-enhanced capabilities are resonating with clients as portfolio complexity increases. We are embedding large language models into risk analytics and portfolio construction workflows, enabling portfolio managers to interrogate multi-asset exposures in natural language and generate scenario analyses in seconds rather than hours.",
+    "theme_tags": "[\"ai_capex\", \"competitive_dynamics\", \"pricing_power\"]",
+    "sentiment": "positive",
+    "source": "Q1 2026 Earnings Call"
+  },
+  {
+    "ticker": "BLK",
+    "fiscal_quarter": "Q1 2026",
+    "quote_text": "Tariff uncertainty is creating both risk and opportunity for active managers. We are seeing renewed client interest in systematic strategies that can dynamically hedge trade policy risk, and our multi-factor models have adapted quickly to incorporate tariff exposure as a priced factor.",
+    "theme_tags": "[\"tariff_impact\", \"competitive_dynamics\", \"guidance\"]",
+    "sentiment": "neutral",
+    "source": "Q1 2026 Earnings Call"
+  }
+]

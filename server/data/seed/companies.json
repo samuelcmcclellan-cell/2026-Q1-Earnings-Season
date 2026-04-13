@@ -1,0 +1,1952 @@
+[
+  {
+    "ticker": "AAPL",
+    "name": "Apple Inc.",
+    "sector": "Technology",
+    "industry": "Consumer Electronics",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "mega",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "MSFT",
+    "name": "Microsoft Corporation",
+    "sector": "Technology",
+    "industry": "Software - Infrastructure",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "mega",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "GOOGL",
+    "name": "Alphabet Inc.",
+    "sector": "Technology",
+    "industry": "Internet Content & Information",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "mega",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "AMZN",
+    "name": "Amazon.com Inc.",
+    "sector": "Technology",
+    "industry": "Internet Retail",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "mega",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "NVDA",
+    "name": "NVIDIA Corporation",
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "mega",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "META",
+    "name": "Meta Platforms Inc.",
+    "sector": "Technology",
+    "industry": "Internet Content & Information",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "mega",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "TSLA",
+    "name": "Tesla Inc.",
+    "sector": "Technology",
+    "industry": "Auto Manufacturers",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "mega",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "AVGO",
+    "name": "Broadcom Inc.",
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "mega",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "AMD",
+    "name": "Advanced Micro Devices Inc.",
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "ORCL",
+    "name": "Oracle Corporation",
+    "sector": "Technology",
+    "industry": "Software - Infrastructure",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "mega",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "CRM",
+    "name": "Salesforce Inc.",
+    "sector": "Technology",
+    "industry": "Software - Application",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "mega",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "ADBE",
+    "name": "Adobe Inc.",
+    "sector": "Technology",
+    "industry": "Software - Application",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "INTC",
+    "name": "Intel Corporation",
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "CSCO",
+    "name": "Cisco Systems Inc.",
+    "sector": "Technology",
+    "industry": "Communication Equipment",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "QCOM",
+    "name": "Qualcomm Inc.",
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "TXN",
+    "name": "Texas Instruments Inc.",
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "NOW",
+    "name": "ServiceNow Inc.",
+    "sector": "Technology",
+    "industry": "Software - Application",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "IBM",
+    "name": "International Business Machines Corporation",
+    "sector": "Technology",
+    "industry": "Information Technology Services",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "AMAT",
+    "name": "Applied Materials Inc.",
+    "sector": "Technology",
+    "industry": "Semiconductor Equipment & Materials",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "MU",
+    "name": "Micron Technology Inc.",
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "JPM",
+    "name": "JPMorgan Chase & Co.",
+    "sector": "Financials",
+    "industry": "Banks - Diversified",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "mega",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "BAC",
+    "name": "Bank of America Corporation",
+    "sector": "Financials",
+    "industry": "Banks - Diversified",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "mega",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "WFC",
+    "name": "Wells Fargo & Company",
+    "sector": "Financials",
+    "industry": "Banks - Diversified",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "GS",
+    "name": "The Goldman Sachs Group Inc.",
+    "sector": "Financials",
+    "industry": "Capital Markets",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "MS",
+    "name": "Morgan Stanley",
+    "sector": "Financials",
+    "industry": "Capital Markets",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "C",
+    "name": "Citigroup Inc.",
+    "sector": "Financials",
+    "industry": "Banks - Diversified",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "AXP",
+    "name": "American Express Company",
+    "sector": "Financials",
+    "industry": "Credit Services",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "SCHW",
+    "name": "The Charles Schwab Corporation",
+    "sector": "Financials",
+    "industry": "Capital Markets",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "BLK",
+    "name": "BlackRock Inc.",
+    "sector": "Financials",
+    "industry": "Asset Management",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "COF",
+    "name": "Capital One Financial Corporation",
+    "sector": "Financials",
+    "industry": "Credit Services",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "USB",
+    "name": "U.S. Bancorp",
+    "sector": "Financials",
+    "industry": "Banks - Regional",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "PNC",
+    "name": "The PNC Financial Services Group Inc.",
+    "sector": "Financials",
+    "industry": "Banks - Regional",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "TFC",
+    "name": "Truist Financial Corporation",
+    "sector": "Financials",
+    "industry": "Banks - Regional",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "MMC",
+    "name": "Marsh & McLennan Companies Inc.",
+    "sector": "Financials",
+    "industry": "Insurance Brokers",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "CB",
+    "name": "Chubb Limited",
+    "sector": "Financials",
+    "industry": "Insurance - Property & Casualty",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "UNH",
+    "name": "UnitedHealth Group Inc.",
+    "sector": "Healthcare",
+    "industry": "Healthcare Plans",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "mega",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "LLY",
+    "name": "Eli Lilly and Company",
+    "sector": "Healthcare",
+    "industry": "Drug Manufacturers - General",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "mega",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "MRK",
+    "name": "Merck & Co. Inc.",
+    "sector": "Healthcare",
+    "industry": "Drug Manufacturers - General",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "mega",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "JNJ",
+    "name": "Johnson & Johnson",
+    "sector": "Healthcare",
+    "industry": "Drug Manufacturers - General",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "mega",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "PFE",
+    "name": "Pfizer Inc.",
+    "sector": "Healthcare",
+    "industry": "Drug Manufacturers - General",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "ABBV",
+    "name": "AbbVie Inc.",
+    "sector": "Healthcare",
+    "industry": "Drug Manufacturers - General",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "mega",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "TMO",
+    "name": "Thermo Fisher Scientific Inc.",
+    "sector": "Healthcare",
+    "industry": "Diagnostics & Research",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "ABT",
+    "name": "Abbott Laboratories",
+    "sector": "Healthcare",
+    "industry": "Medical Devices",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "DHR",
+    "name": "Danaher Corporation",
+    "sector": "Healthcare",
+    "industry": "Diagnostics & Research",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "BMY",
+    "name": "Bristol-Myers Squibb Company",
+    "sector": "Healthcare",
+    "industry": "Drug Manufacturers - General",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "AMGN",
+    "name": "Amgen Inc.",
+    "sector": "Healthcare",
+    "industry": "Drug Manufacturers - General",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "GILD",
+    "name": "Gilead Sciences Inc.",
+    "sector": "Healthcare",
+    "industry": "Drug Manufacturers - General",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "XOM",
+    "name": "Exxon Mobil Corporation",
+    "sector": "Energy",
+    "industry": "Oil & Gas Integrated",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "mega",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "CVX",
+    "name": "Chevron Corporation",
+    "sector": "Energy",
+    "industry": "Oil & Gas Integrated",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "mega",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "COP",
+    "name": "ConocoPhillips",
+    "sector": "Energy",
+    "industry": "Oil & Gas E&P",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "SLB",
+    "name": "Schlumberger Limited",
+    "sector": "Energy",
+    "industry": "Oil & Gas Equipment & Services",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "EOG",
+    "name": "EOG Resources Inc.",
+    "sector": "Energy",
+    "industry": "Oil & Gas E&P",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "PSX",
+    "name": "Phillips 66",
+    "sector": "Energy",
+    "industry": "Oil & Gas Refining & Marketing",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "BA",
+    "name": "The Boeing Company",
+    "sector": "Industrials",
+    "industry": "Aerospace & Defense",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "CAT",
+    "name": "Caterpillar Inc.",
+    "sector": "Industrials",
+    "industry": "Farm & Heavy Construction Machinery",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "RTX",
+    "name": "RTX Corporation",
+    "sector": "Industrials",
+    "industry": "Aerospace & Defense",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "HON",
+    "name": "Honeywell International Inc.",
+    "sector": "Industrials",
+    "industry": "Conglomerates",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "LMT",
+    "name": "Lockheed Martin Corporation",
+    "sector": "Industrials",
+    "industry": "Aerospace & Defense",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "UNP",
+    "name": "Union Pacific Corporation",
+    "sector": "Industrials",
+    "industry": "Railroads",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "GE",
+    "name": "GE Aerospace",
+    "sector": "Industrials",
+    "industry": "Aerospace & Defense",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "DE",
+    "name": "Deere & Company",
+    "sector": "Industrials",
+    "industry": "Farm & Heavy Construction Machinery",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "UPS",
+    "name": "United Parcel Service Inc.",
+    "sector": "Industrials",
+    "industry": "Integrated Freight & Logistics",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "MMM",
+    "name": "3M Company",
+    "sector": "Industrials",
+    "industry": "Conglomerates",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "HD",
+    "name": "The Home Depot Inc.",
+    "sector": "Consumer Discretionary",
+    "industry": "Home Improvement Retail",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "mega",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "LOW",
+    "name": "Lowe's Companies Inc.",
+    "sector": "Consumer Discretionary",
+    "industry": "Home Improvement Retail",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "MCD",
+    "name": "McDonald's Corporation",
+    "sector": "Consumer Discretionary",
+    "industry": "Restaurants",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "SBUX",
+    "name": "Starbucks Corporation",
+    "sector": "Consumer Discretionary",
+    "industry": "Restaurants",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "NKE",
+    "name": "NIKE Inc.",
+    "sector": "Consumer Discretionary",
+    "industry": "Footwear & Accessories",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "TJX",
+    "name": "The TJX Companies Inc.",
+    "sector": "Consumer Discretionary",
+    "industry": "Apparel Retail",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "BKNG",
+    "name": "Booking Holdings Inc.",
+    "sector": "Consumer Discretionary",
+    "industry": "Travel Services",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "CMG",
+    "name": "Chipotle Mexican Grill Inc.",
+    "sector": "Consumer Discretionary",
+    "industry": "Restaurants",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "WMT",
+    "name": "Walmart Inc.",
+    "sector": "Consumer Staples",
+    "industry": "Discount Stores",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "mega",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "PG",
+    "name": "The Procter & Gamble Company",
+    "sector": "Consumer Staples",
+    "industry": "Household & Personal Products",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "mega",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "KO",
+    "name": "The Coca-Cola Company",
+    "sector": "Consumer Staples",
+    "industry": "Beverages - Non-Alcoholic",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "mega",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "PEP",
+    "name": "PepsiCo Inc.",
+    "sector": "Consumer Staples",
+    "industry": "Beverages - Non-Alcoholic",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "COST",
+    "name": "Costco Wholesale Corporation",
+    "sector": "Consumer Staples",
+    "industry": "Discount Stores",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "mega",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "CL",
+    "name": "Colgate-Palmolive Company",
+    "sector": "Consumer Staples",
+    "industry": "Household & Personal Products",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "NFLX",
+    "name": "Netflix Inc.",
+    "sector": "Communication Services",
+    "industry": "Entertainment",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "mega",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "DIS",
+    "name": "The Walt Disney Company",
+    "sector": "Communication Services",
+    "industry": "Entertainment",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "CMCSA",
+    "name": "Comcast Corporation",
+    "sector": "Communication Services",
+    "industry": "Telecom Services",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "T",
+    "name": "AT&T Inc.",
+    "sector": "Communication Services",
+    "industry": "Telecom Services",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "LIN",
+    "name": "Linde plc",
+    "sector": "Materials",
+    "industry": "Specialty Chemicals",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "APD",
+    "name": "Air Products and Chemicals Inc.",
+    "sector": "Materials",
+    "industry": "Specialty Chemicals",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "NEE",
+    "name": "NextEra Energy Inc.",
+    "sector": "Utilities",
+    "industry": "Utilities - Regulated Electric",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "DUK",
+    "name": "Duke Energy Corporation",
+    "sector": "Utilities",
+    "industry": "Utilities - Regulated Electric",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "AMT",
+    "name": "American Tower Corporation",
+    "sector": "Real Estate",
+    "industry": "REIT - Specialty",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "PLD",
+    "name": "Prologis Inc.",
+    "sector": "Real Estate",
+    "industry": "REIT - Industrial",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "ASML",
+    "name": "ASML Holding N.V.",
+    "sector": "Technology",
+    "industry": "Semiconductor Equipment & Materials",
+    "region": "europe",
+    "country": "NL",
+    "market_cap_category": "mega",
+    "index_membership": "AEX"
+  },
+  {
+    "ticker": "SAP",
+    "name": "SAP SE",
+    "sector": "Technology",
+    "industry": "Software - Application",
+    "region": "europe",
+    "country": "DE",
+    "market_cap_category": "mega",
+    "index_membership": "DAX"
+  },
+  {
+    "ticker": "NVO",
+    "name": "Novo Nordisk A/S",
+    "sector": "Healthcare",
+    "industry": "Drug Manufacturers - General",
+    "region": "europe",
+    "country": "DK",
+    "market_cap_category": "mega",
+    "index_membership": "OMX Copenhagen 25"
+  },
+  {
+    "ticker": "AZN",
+    "name": "AstraZeneca PLC",
+    "sector": "Healthcare",
+    "industry": "Drug Manufacturers - General",
+    "region": "europe",
+    "country": "GB",
+    "market_cap_category": "mega",
+    "index_membership": "FTSE 100"
+  },
+  {
+    "ticker": "SHEL",
+    "name": "Shell plc",
+    "sector": "Energy",
+    "industry": "Oil & Gas Integrated",
+    "region": "europe",
+    "country": "GB",
+    "market_cap_category": "mega",
+    "index_membership": "FTSE 100"
+  },
+  {
+    "ticker": "NSRGY",
+    "name": "Nestle S.A.",
+    "sector": "Consumer Staples",
+    "industry": "Packaged Foods",
+    "region": "europe",
+    "country": "CH",
+    "market_cap_category": "mega",
+    "index_membership": "SMI"
+  },
+  {
+    "ticker": "RHHBY",
+    "name": "Roche Holding AG",
+    "sector": "Healthcare",
+    "industry": "Drug Manufacturers - General",
+    "region": "europe",
+    "country": "CH",
+    "market_cap_category": "mega",
+    "index_membership": "SMI"
+  },
+  {
+    "ticker": "SIEGY",
+    "name": "Siemens AG",
+    "sector": "Industrials",
+    "industry": "Conglomerates",
+    "region": "europe",
+    "country": "DE",
+    "market_cap_category": "large",
+    "index_membership": "DAX"
+  },
+  {
+    "ticker": "LVMUY",
+    "name": "LVMH Moet Hennessy Louis Vuitton SE",
+    "sector": "Consumer Discretionary",
+    "industry": "Luxury Goods",
+    "region": "europe",
+    "country": "FR",
+    "market_cap_category": "mega",
+    "index_membership": "CAC 40"
+  },
+  {
+    "ticker": "BNPQY",
+    "name": "BNP Paribas S.A.",
+    "sector": "Financials",
+    "industry": "Banks - Diversified",
+    "region": "europe",
+    "country": "FR",
+    "market_cap_category": "large",
+    "index_membership": "CAC 40"
+  },
+  {
+    "ticker": "SAN",
+    "name": "Banco Santander S.A.",
+    "sector": "Financials",
+    "industry": "Banks - Diversified",
+    "region": "europe",
+    "country": "ES",
+    "market_cap_category": "large",
+    "index_membership": "IBEX 35"
+  },
+  {
+    "ticker": "ING",
+    "name": "ING Groep N.V.",
+    "sector": "Financials",
+    "industry": "Banks - Diversified",
+    "region": "europe",
+    "country": "NL",
+    "market_cap_category": "large",
+    "index_membership": "AEX"
+  },
+  {
+    "ticker": "BP",
+    "name": "BP p.l.c.",
+    "sector": "Energy",
+    "industry": "Oil & Gas Integrated",
+    "region": "europe",
+    "country": "GB",
+    "market_cap_category": "large",
+    "index_membership": "FTSE 100"
+  },
+  {
+    "ticker": "TTE",
+    "name": "TotalEnergies SE",
+    "sector": "Energy",
+    "industry": "Oil & Gas Integrated",
+    "region": "europe",
+    "country": "FR",
+    "market_cap_category": "large",
+    "index_membership": "CAC 40"
+  },
+  {
+    "ticker": "UL",
+    "name": "Unilever PLC",
+    "sector": "Consumer Staples",
+    "industry": "Household & Personal Products",
+    "region": "europe",
+    "country": "GB",
+    "market_cap_category": "large",
+    "index_membership": "FTSE 100"
+  },
+  {
+    "ticker": "GSK",
+    "name": "GSK plc",
+    "sector": "Healthcare",
+    "industry": "Drug Manufacturers - General",
+    "region": "europe",
+    "country": "GB",
+    "market_cap_category": "large",
+    "index_membership": "FTSE 100"
+  },
+  {
+    "ticker": "RIO",
+    "name": "Rio Tinto Group",
+    "sector": "Materials",
+    "industry": "Other Industrial Metals & Mining",
+    "region": "europe",
+    "country": "GB",
+    "market_cap_category": "large",
+    "index_membership": "FTSE 100"
+  },
+  {
+    "ticker": "BHP",
+    "name": "BHP Group Limited",
+    "sector": "Materials",
+    "industry": "Other Industrial Metals & Mining",
+    "region": "europe",
+    "country": "AU",
+    "market_cap_category": "large",
+    "index_membership": "ASX 200"
+  },
+  {
+    "ticker": "HSBC",
+    "name": "HSBC Holdings plc",
+    "sector": "Financials",
+    "industry": "Banks - Diversified",
+    "region": "europe",
+    "country": "GB",
+    "market_cap_category": "large",
+    "index_membership": "FTSE 100"
+  },
+  {
+    "ticker": "DEO",
+    "name": "Diageo plc",
+    "sector": "Consumer Staples",
+    "industry": "Beverages - Wineries & Distilleries",
+    "region": "europe",
+    "country": "GB",
+    "market_cap_category": "large",
+    "index_membership": "FTSE 100"
+  },
+  {
+    "ticker": "SNY",
+    "name": "Sanofi S.A.",
+    "sector": "Healthcare",
+    "industry": "Drug Manufacturers - General",
+    "region": "europe",
+    "country": "FR",
+    "market_cap_category": "large",
+    "index_membership": "CAC 40"
+  },
+  {
+    "ticker": "NVS",
+    "name": "Novartis AG",
+    "sector": "Healthcare",
+    "industry": "Drug Manufacturers - General",
+    "region": "europe",
+    "country": "CH",
+    "market_cap_category": "mega",
+    "index_membership": "SMI"
+  },
+  {
+    "ticker": "EQNR",
+    "name": "Equinor ASA",
+    "sector": "Energy",
+    "industry": "Oil & Gas Integrated",
+    "region": "europe",
+    "country": "NO",
+    "market_cap_category": "large",
+    "index_membership": "OBX"
+  },
+  {
+    "ticker": "ABB",
+    "name": "ABB Ltd",
+    "sector": "Industrials",
+    "industry": "Electrical Equipment & Parts",
+    "region": "europe",
+    "country": "CH",
+    "market_cap_category": "large",
+    "index_membership": "SMI"
+  },
+  {
+    "ticker": "ERIC",
+    "name": "Telefonaktiebolaget LM Ericsson",
+    "sector": "Technology",
+    "industry": "Communication Equipment",
+    "region": "europe",
+    "country": "SE",
+    "market_cap_category": "mid",
+    "index_membership": "OMX Stockholm 30"
+  },
+  {
+    "ticker": "NOK",
+    "name": "Nokia Corporation",
+    "sector": "Technology",
+    "industry": "Communication Equipment",
+    "region": "europe",
+    "country": "FI",
+    "market_cap_category": "mid",
+    "index_membership": "OMX Helsinki 25"
+  },
+  {
+    "ticker": "DB",
+    "name": "Deutsche Bank AG",
+    "sector": "Financials",
+    "industry": "Banks - Diversified",
+    "region": "europe",
+    "country": "DE",
+    "market_cap_category": "mid",
+    "index_membership": "DAX"
+  },
+  {
+    "ticker": "UBS",
+    "name": "UBS Group AG",
+    "sector": "Financials",
+    "industry": "Banks - Diversified",
+    "region": "europe",
+    "country": "CH",
+    "market_cap_category": "large",
+    "index_membership": "SMI"
+  },
+  {
+    "ticker": "BCS",
+    "name": "Barclays PLC",
+    "sector": "Financials",
+    "industry": "Banks - Diversified",
+    "region": "europe",
+    "country": "GB",
+    "market_cap_category": "mid",
+    "index_membership": "FTSE 100"
+  },
+  {
+    "ticker": "VOD",
+    "name": "Vodafone Group Public Limited Company",
+    "sector": "Communication Services",
+    "industry": "Telecom Services",
+    "region": "europe",
+    "country": "GB",
+    "market_cap_category": "mid",
+    "index_membership": "FTSE 100"
+  },
+  {
+    "ticker": "TSM",
+    "name": "Taiwan Semiconductor Manufacturing Company Limited",
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "region": "asia",
+    "country": "TW",
+    "market_cap_category": "mega",
+    "index_membership": "TWSE"
+  },
+  {
+    "ticker": "SSNLF",
+    "name": "Samsung Electronics Co. Ltd.",
+    "sector": "Technology",
+    "industry": "Consumer Electronics",
+    "region": "asia",
+    "country": "KR",
+    "market_cap_category": "mega",
+    "index_membership": "KOSPI"
+  },
+  {
+    "ticker": "TM",
+    "name": "Toyota Motor Corporation",
+    "sector": "Consumer Discretionary",
+    "industry": "Auto Manufacturers",
+    "region": "asia",
+    "country": "JP",
+    "market_cap_category": "mega",
+    "index_membership": "Nikkei 225"
+  },
+  {
+    "ticker": "BABA",
+    "name": "Alibaba Group Holding Limited",
+    "sector": "Technology",
+    "industry": "Internet Retail",
+    "region": "asia",
+    "country": "CN",
+    "market_cap_category": "large",
+    "index_membership": "Hang Seng"
+  },
+  {
+    "ticker": "HMC",
+    "name": "Honda Motor Co. Ltd.",
+    "sector": "Consumer Discretionary",
+    "industry": "Auto Manufacturers",
+    "region": "asia",
+    "country": "JP",
+    "market_cap_category": "large",
+    "index_membership": "Nikkei 225"
+  },
+  {
+    "ticker": "SONY",
+    "name": "Sony Group Corporation",
+    "sector": "Technology",
+    "industry": "Consumer Electronics",
+    "region": "asia",
+    "country": "JP",
+    "market_cap_category": "large",
+    "index_membership": "Nikkei 225"
+  },
+  {
+    "ticker": "NIO",
+    "name": "NIO Inc.",
+    "sector": "Consumer Discretionary",
+    "industry": "Auto Manufacturers",
+    "region": "asia",
+    "country": "CN",
+    "market_cap_category": "mid",
+    "index_membership": "Hang Seng"
+  },
+  {
+    "ticker": "BIDU",
+    "name": "Baidu Inc.",
+    "sector": "Technology",
+    "industry": "Internet Content & Information",
+    "region": "asia",
+    "country": "CN",
+    "market_cap_category": "mid",
+    "index_membership": "Hang Seng"
+  },
+  {
+    "ticker": "PDD",
+    "name": "PDD Holdings Inc.",
+    "sector": "Technology",
+    "industry": "Internet Retail",
+    "region": "asia",
+    "country": "CN",
+    "market_cap_category": "large",
+    "index_membership": "Hang Seng"
+  },
+  {
+    "ticker": "JD",
+    "name": "JD.com Inc.",
+    "sector": "Technology",
+    "industry": "Internet Retail",
+    "region": "asia",
+    "country": "CN",
+    "market_cap_category": "large",
+    "index_membership": "Hang Seng"
+  },
+  {
+    "ticker": "TCEHY",
+    "name": "Tencent Holdings Limited",
+    "sector": "Technology",
+    "industry": "Internet Content & Information",
+    "region": "asia",
+    "country": "CN",
+    "market_cap_category": "mega",
+    "index_membership": "Hang Seng"
+  },
+  {
+    "ticker": "LI",
+    "name": "Li Auto Inc.",
+    "sector": "Consumer Discretionary",
+    "industry": "Auto Manufacturers",
+    "region": "asia",
+    "country": "CN",
+    "market_cap_category": "mid",
+    "index_membership": "Hang Seng"
+  },
+  {
+    "ticker": "INFY",
+    "name": "Infosys Limited",
+    "sector": "Technology",
+    "industry": "Information Technology Services",
+    "region": "asia",
+    "country": "IN",
+    "market_cap_category": "large",
+    "index_membership": "NIFTY 50"
+  },
+  {
+    "ticker": "WIT",
+    "name": "Wipro Limited",
+    "sector": "Technology",
+    "industry": "Information Technology Services",
+    "region": "asia",
+    "country": "IN",
+    "market_cap_category": "mid",
+    "index_membership": "NIFTY 50"
+  },
+  {
+    "ticker": "HDB",
+    "name": "HDFC Bank Limited",
+    "sector": "Financials",
+    "industry": "Banks - Regional",
+    "region": "asia",
+    "country": "IN",
+    "market_cap_category": "large",
+    "index_membership": "NIFTY 50"
+  },
+  {
+    "ticker": "IBN",
+    "name": "ICICI Bank Limited",
+    "sector": "Financials",
+    "industry": "Banks - Regional",
+    "region": "asia",
+    "country": "IN",
+    "market_cap_category": "large",
+    "index_membership": "NIFTY 50"
+  },
+  {
+    "ticker": "KB",
+    "name": "KB Financial Group Inc.",
+    "sector": "Financials",
+    "industry": "Banks - Regional",
+    "region": "asia",
+    "country": "KR",
+    "market_cap_category": "mid",
+    "index_membership": "KOSPI"
+  },
+  {
+    "ticker": "SHG",
+    "name": "Shinhan Financial Group Co. Ltd.",
+    "sector": "Financials",
+    "industry": "Banks - Regional",
+    "region": "asia",
+    "country": "KR",
+    "market_cap_category": "mid",
+    "index_membership": "KOSPI"
+  },
+  {
+    "ticker": "MUFG",
+    "name": "Mitsubishi UFJ Financial Group Inc.",
+    "sector": "Financials",
+    "industry": "Banks - Diversified",
+    "region": "asia",
+    "country": "JP",
+    "market_cap_category": "large",
+    "index_membership": "Nikkei 225"
+  },
+  {
+    "ticker": "SMFG",
+    "name": "Sumitomo Mitsui Financial Group Inc.",
+    "sector": "Financials",
+    "industry": "Banks - Diversified",
+    "region": "asia",
+    "country": "JP",
+    "market_cap_category": "large",
+    "index_membership": "Nikkei 225"
+  },
+  {
+    "ticker": "MFG",
+    "name": "Mizuho Financial Group Inc.",
+    "sector": "Financials",
+    "industry": "Banks - Diversified",
+    "region": "asia",
+    "country": "JP",
+    "market_cap_category": "mid",
+    "index_membership": "Nikkei 225"
+  },
+  {
+    "ticker": "NTDOY",
+    "name": "Nintendo Co. Ltd.",
+    "sector": "Technology",
+    "industry": "Electronic Gaming & Multimedia",
+    "region": "asia",
+    "country": "JP",
+    "market_cap_category": "large",
+    "index_membership": "Nikkei 225"
+  },
+  {
+    "ticker": "UMC",
+    "name": "United Microelectronics Corporation",
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "region": "asia",
+    "country": "TW",
+    "market_cap_category": "mid",
+    "index_membership": "TWSE"
+  },
+  {
+    "ticker": "QFIN",
+    "name": "Qifu Technology Inc.",
+    "sector": "Technology",
+    "industry": "Software - Infrastructure",
+    "region": "asia",
+    "country": "CN",
+    "market_cap_category": "mid",
+    "index_membership": null
+  },
+  {
+    "ticker": "V",
+    "name": "Visa Inc.",
+    "sector": "Financials",
+    "industry": "Credit Services",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "mega",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "MA",
+    "name": "Mastercard Incorporated",
+    "sector": "Financials",
+    "industry": "Credit Services",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "mega",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "PYPL",
+    "name": "PayPal Holdings Inc.",
+    "sector": "Financials",
+    "industry": "Credit Services",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "ISRG",
+    "name": "Intuitive Surgical Inc.",
+    "sector": "Healthcare",
+    "industry": "Medical Instruments & Supplies",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "VRTX",
+    "name": "Vertex Pharmaceuticals Incorporated",
+    "sector": "Healthcare",
+    "industry": "Biotechnology",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "MDT",
+    "name": "Medtronic plc",
+    "sector": "Healthcare",
+    "industry": "Medical Devices",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "SYK",
+    "name": "Stryker Corporation",
+    "sector": "Healthcare",
+    "industry": "Medical Devices",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "ELV",
+    "name": "Elevance Health Inc.",
+    "sector": "Healthcare",
+    "industry": "Healthcare Plans",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "CI",
+    "name": "The Cigna Group",
+    "sector": "Healthcare",
+    "industry": "Healthcare Plans",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "PANW",
+    "name": "Palo Alto Networks Inc.",
+    "sector": "Technology",
+    "industry": "Software - Infrastructure",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "INTU",
+    "name": "Intuit Inc.",
+    "sector": "Technology",
+    "industry": "Software - Application",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "SNPS",
+    "name": "Synopsys Inc.",
+    "sector": "Technology",
+    "industry": "Software - Infrastructure",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "LRCX",
+    "name": "Lam Research Corporation",
+    "sector": "Technology",
+    "industry": "Semiconductor Equipment & Materials",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "KLAC",
+    "name": "KLA Corporation",
+    "sector": "Technology",
+    "industry": "Semiconductor Equipment & Materials",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "FDX",
+    "name": "FedEx Corporation",
+    "sector": "Industrials",
+    "industry": "Integrated Freight & Logistics",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "NOC",
+    "name": "Northrop Grumman Corporation",
+    "sector": "Industrials",
+    "industry": "Aerospace & Defense",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "GD",
+    "name": "General Dynamics Corporation",
+    "sector": "Industrials",
+    "industry": "Aerospace & Defense",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "EMR",
+    "name": "Emerson Electric Co.",
+    "sector": "Industrials",
+    "industry": "Electrical Equipment & Parts",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "WM",
+    "name": "Waste Management Inc.",
+    "sector": "Industrials",
+    "industry": "Waste Management",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "SO",
+    "name": "The Southern Company",
+    "sector": "Utilities",
+    "industry": "Utilities - Regulated Electric",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "AEP",
+    "name": "American Electric Power Company Inc.",
+    "sector": "Utilities",
+    "industry": "Utilities - Regulated Electric",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "D",
+    "name": "Dominion Energy Inc.",
+    "sector": "Utilities",
+    "industry": "Utilities - Regulated Electric",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "SRE",
+    "name": "Sempra",
+    "sector": "Utilities",
+    "industry": "Utilities - Diversified",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "FCX",
+    "name": "Freeport-McMoRan Inc.",
+    "sector": "Materials",
+    "industry": "Copper",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "NEM",
+    "name": "Newmont Corporation",
+    "sector": "Materials",
+    "industry": "Gold",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "SHW",
+    "name": "The Sherwin-Williams Company",
+    "sector": "Materials",
+    "industry": "Specialty Chemicals",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "ECL",
+    "name": "Ecolab Inc.",
+    "sector": "Materials",
+    "industry": "Specialty Chemicals",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "SPG",
+    "name": "Simon Property Group Inc.",
+    "sector": "Real Estate",
+    "industry": "REIT - Retail",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "EQIX",
+    "name": "Equinix Inc.",
+    "sector": "Real Estate",
+    "industry": "REIT - Specialty",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "ABNB",
+    "name": "Airbnb Inc.",
+    "sector": "Consumer Discretionary",
+    "industry": "Travel Services",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "MAR",
+    "name": "Marriott International Inc.",
+    "sector": "Consumer Discretionary",
+    "industry": "Lodging",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "UBER",
+    "name": "Uber Technologies Inc.",
+    "sector": "Technology",
+    "industry": "Software - Application",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "GM",
+    "name": "General Motors Company",
+    "sector": "Consumer Discretionary",
+    "industry": "Auto Manufacturers",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "F",
+    "name": "Ford Motor Company",
+    "sector": "Consumer Discretionary",
+    "industry": "Auto Manufacturers",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "mid",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "MO",
+    "name": "Altria Group Inc.",
+    "sector": "Consumer Staples",
+    "industry": "Tobacco",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "PM",
+    "name": "Philip Morris International Inc.",
+    "sector": "Consumer Staples",
+    "industry": "Tobacco",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "MDLZ",
+    "name": "Mondelez International Inc.",
+    "sector": "Consumer Staples",
+    "industry": "Confectioners",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "KHC",
+    "name": "The Kraft Heinz Company",
+    "sector": "Consumer Staples",
+    "industry": "Packaged Foods",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "mid",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "VZ",
+    "name": "Verizon Communications Inc.",
+    "sector": "Communication Services",
+    "industry": "Telecom Services",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "TMUS",
+    "name": "T-Mobile US Inc.",
+    "sector": "Communication Services",
+    "industry": "Telecom Services",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "mega",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "SPOT",
+    "name": "Spotify Technology S.A.",
+    "sector": "Communication Services",
+    "industry": "Entertainment",
+    "region": "europe",
+    "country": "LU",
+    "market_cap_category": "large",
+    "index_membership": null
+  },
+  {
+    "ticker": "SE",
+    "name": "Sea Limited",
+    "sector": "Technology",
+    "industry": "Internet Content & Information",
+    "region": "asia",
+    "country": "SG",
+    "market_cap_category": "mid",
+    "index_membership": null
+  },
+  {
+    "ticker": "GRAB",
+    "name": "Grab Holdings Limited",
+    "sector": "Technology",
+    "industry": "Software - Application",
+    "region": "asia",
+    "country": "SG",
+    "market_cap_category": "mid",
+    "index_membership": null
+  },
+  {
+    "ticker": "RELX",
+    "name": "RELX PLC",
+    "sector": "Industrials",
+    "industry": "Consulting Services",
+    "region": "europe",
+    "country": "GB",
+    "market_cap_category": "large",
+    "index_membership": "FTSE 100"
+  },
+  {
+    "ticker": "RACE",
+    "name": "Ferrari N.V.",
+    "sector": "Consumer Discretionary",
+    "industry": "Auto Manufacturers",
+    "region": "europe",
+    "country": "IT",
+    "market_cap_category": "large",
+    "index_membership": "FTSE MIB"
+  },
+  {
+    "ticker": "SHOP",
+    "name": "Shopify Inc.",
+    "sector": "Technology",
+    "industry": "Software - Application",
+    "region": "us",
+    "country": "CA",
+    "market_cap_category": "large",
+    "index_membership": "S&P/TSX"
+  },
+  {
+    "ticker": "RY",
+    "name": "Royal Bank of Canada",
+    "sector": "Financials",
+    "industry": "Banks - Diversified",
+    "region": "us",
+    "country": "CA",
+    "market_cap_category": "large",
+    "index_membership": "S&P/TSX"
+  },
+  {
+    "ticker": "TD",
+    "name": "The Toronto-Dominion Bank",
+    "sector": "Financials",
+    "industry": "Banks - Diversified",
+    "region": "us",
+    "country": "CA",
+    "market_cap_category": "large",
+    "index_membership": "S&P/TSX"
+  },
+  {
+    "ticker": "CNQ",
+    "name": "Canadian Natural Resources Limited",
+    "sector": "Energy",
+    "industry": "Oil & Gas E&P",
+    "region": "us",
+    "country": "CA",
+    "market_cap_category": "large",
+    "index_membership": "S&P/TSX"
+  },
+  {
+    "ticker": "VRT",
+    "name": "Vertiv Holdings Co",
+    "sector": "Industrials",
+    "industry": "Electrical Equipment & Parts",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "mid",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "CRWD",
+    "name": "CrowdStrike Holdings Inc.",
+    "sector": "Technology",
+    "industry": "Software - Infrastructure",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500"
+  },
+  {
+    "ticker": "MELI",
+    "name": "MercadoLibre Inc.",
+    "sector": "Technology",
+    "industry": "Internet Retail",
+    "region": "us",
+    "country": "UY",
+    "market_cap_category": "large",
+    "index_membership": null
+  },
+  {
+    "ticker": "VALE",
+    "name": "Vale S.A.",
+    "sector": "Materials",
+    "industry": "Other Industrial Metals & Mining",
+    "region": "us",
+    "country": "BR",
+    "market_cap_category": "large",
+    "index_membership": "Ibovespa"
+  },
+  {
+    "ticker": "PBR",
+    "name": "Petroleo Brasileiro S.A. - Petrobras",
+    "sector": "Energy",
+    "industry": "Oil & Gas Integrated",
+    "region": "us",
+    "country": "BR",
+    "market_cap_category": "large",
+    "index_membership": "Ibovespa"
+  }
+]

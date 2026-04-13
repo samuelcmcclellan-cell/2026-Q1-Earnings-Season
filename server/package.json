@@ -1,0 +1,26 @@
+{
+  "name": "earnings-tracker-server",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --experimental-transform-types --watch src/index.ts",
+    "build": "tsc",
+    "seed": "node --experimental-transform-types src/scripts/seed-db.ts",
+    "ingest": "node --experimental-transform-types src/scripts/ingest.ts",
+    "migrate": "node --experimental-transform-types src/db/migrate.ts"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "sql.js": "^1.12.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "@anthropic-ai/sdk": "^0.39.0",
+    "date-fns": "^4.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3",
+    "@types/express": "^5.0.0",
+    "@types/cors": "^2.8.17",
+    "@types/node": "^22.10.0"
+  }
+}
