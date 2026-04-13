@@ -4,5 +4,5 @@
     "module": "Node16",
     "moduleResolution": "Node16"
   },
-  "include": ["api/**/*.ts", "server/src/**/*.ts"]
+  "include": ["api/**/*.ts", "api/**/*.mts", "api/**/*.d.ts", "server/src/**/*.ts"]
 }

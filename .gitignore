@@ -7,3 +7,5 @@ server/data/*.db
 .DS_Store
 *.log
 .claude/
+
+.vercel
