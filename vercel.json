@@ -4,7 +4,7 @@
   "installCommand": "npm install",
   "framework": null,
   "functions": {
-    "api/**/*.mts": {
+    "api/index.mts": {
       "includeFiles": "server/data/**,server/src/db/schema.sql"
     }
   },
