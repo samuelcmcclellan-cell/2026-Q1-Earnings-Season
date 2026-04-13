@@ -42,6 +42,10 @@ export function saveDb(): void {
   }
 }
 
+export function setDb(database: Database): void {
+  db = database;
+}
+
 export function closeDb(): void {
   if (db) {
     saveDb();

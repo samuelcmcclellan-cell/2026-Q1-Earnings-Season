@@ -3,6 +3,7 @@ dist/
 .env
 *.db
 server/data/*.db
+!server/data/earnings.db
 .DS_Store
 *.log
 .claude/
