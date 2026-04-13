@@ -25,7 +25,13 @@ function queryOne(sql: string, params: any[] = []): any | null {
 async function getApp() {
   if (app) return app;
 
-  const SQL = await initSqlJs();
+  // Load WASM binary explicitly for serverless environments
+  const wasmPath = path.join(process.cwd(), 'server/data/sql-wasm.wasm');
+  const initOptions: any = {};
+  if (fs.existsSync(wasmPath)) {
+    initOptions.wasmBinary = fs.readFileSync(wasmPath);
+  }
+  const SQL = await initSqlJs(initOptions);
   const dbPath = path.join(process.cwd(), 'server/data/earnings.db');
   if (fs.existsSync(dbPath)) {
     db = new SQL.Database(fs.readFileSync(dbPath));
