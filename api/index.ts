@@ -1,4 +1,4 @@
-import type { VercelRequest, VercelResponse } from '@vercel/node';
+import type { IncomingMessage, ServerResponse } from 'node:http';
 import initSqlJs from 'sql.js';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -62,7 +62,7 @@ async function getApp() {
   return app;
 }
 
-export default async function handler(req: VercelRequest, res: VercelResponse) {
+export default async function handler(req: IncomingMessage, res: ServerResponse) {
   const expressApp = await getApp();
   expressApp(req as any, res as any);
 }
