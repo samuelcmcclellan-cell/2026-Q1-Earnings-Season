@@ -9,10 +9,11 @@ export interface Company {
   region: string;
   country: string;
   market_cap_category: string;
+  style: string;
   index_membership: string | null;
 }
 
-export async function getAllCompanies(filters?: { sector?: string; region?: string }): Promise<Company[]> {
+export async function getAllCompanies(filters?: { sector?: string; region?: string; style?: string; market_cap_category?: string }): Promise<Company[]> {
   const db = await getDb();
   let sql = 'SELECT * FROM companies';
   const conditions: string[] = [];
@@ -25,6 +26,14 @@ export async function getAllCompanies(filters?: { sector?: string; region?: stri
   if (filters?.region) {
     conditions.push('region = ?');
     params.push(filters.region);
+  }
+  if (filters?.style) {
+    conditions.push('style = ?');
+    params.push(filters.style);
+  }
+  if (filters?.market_cap_category) {
+    conditions.push('market_cap_category = ?');
+    params.push(filters.market_cap_category);
   }
   if (conditions.length) {
     sql += ' WHERE ' + conditions.join(' AND ');
@@ -63,8 +72,8 @@ export async function getCompanyById(id: number): Promise<Company | null> {
 export async function upsertCompany(data: Omit<Company, 'id'>): Promise<void> {
   const db = await getDb();
   db.run(
-    `INSERT INTO companies (ticker, name, sector, industry, region, country, market_cap_category, index_membership)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+    `INSERT INTO companies (ticker, name, sector, industry, region, country, market_cap_category, style, index_membership)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
      ON CONFLICT(ticker) DO UPDATE SET
        name = excluded.name,
        sector = excluded.sector,
@@ -72,17 +81,18 @@ export async function upsertCompany(data: Omit<Company, 'id'>): Promise<void> {
        region = excluded.region,
        country = excluded.country,
        market_cap_category = excluded.market_cap_category,
+       style = excluded.style,
        index_membership = excluded.index_membership,
        updated_at = datetime('now')`,
-    [data.ticker, data.name, data.sector, data.industry, data.region, data.country, data.market_cap_category, data.index_membership]
+    [data.ticker, data.name, data.sector, data.industry, data.region, data.country, data.market_cap_category, data.style || 'blend', data.index_membership]
   );
 }
 
 export async function bulkUpsertCompanies(companies: Omit<Company, 'id'>[]): Promise<void> {
   const db = await getDb();
   const stmt = db.prepare(
-    `INSERT INTO companies (ticker, name, sector, industry, region, country, market_cap_category, index_membership)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+    `INSERT INTO companies (ticker, name, sector, industry, region, country, market_cap_category, style, index_membership)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
      ON CONFLICT(ticker) DO UPDATE SET
        name = excluded.name,
        sector = excluded.sector,
@@ -90,12 +100,13 @@ export async function bulkUpsertCompanies(companies: Omit<Company, 'id'>[]): Pro
        region = excluded.region,
        country = excluded.country,
        market_cap_category = excluded.market_cap_category,
+       style = excluded.style,
        index_membership = excluded.index_membership,
        updated_at = datetime('now')`
   );
 
   for (const c of companies) {
-    stmt.run([c.ticker, c.name, c.sector, c.industry, c.region, c.country, c.market_cap_category, c.index_membership]);
+    stmt.run([c.ticker, c.name, c.sector, c.industry, c.region, c.country, c.market_cap_category, c.style || 'blend', c.index_membership]);
   }
   stmt.free();
   saveDb();

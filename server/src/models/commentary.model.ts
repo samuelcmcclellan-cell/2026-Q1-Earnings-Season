@@ -20,6 +20,8 @@ export async function getCommentary(filters?: {
   quarter?: string;
   theme?: string;
   sentiment?: string;
+  sector?: string;
+  region?: string;
   limit?: number;
 }): Promise<CommentaryWithCompany[]> {
   const db = await getDb();
@@ -40,6 +42,14 @@ export async function getCommentary(filters?: {
   if (filters?.sentiment) {
     conditions.push('cm.sentiment = ?');
     params.push(filters.sentiment);
+  }
+  if (filters?.sector) {
+    conditions.push('c.sector = ?');
+    params.push(filters.sector);
+  }
+  if (filters?.region) {
+    conditions.push('c.region = ?');
+    params.push(filters.region);
   }
   if (conditions.length) {
     sql += ' WHERE ' + conditions.join(' AND ');

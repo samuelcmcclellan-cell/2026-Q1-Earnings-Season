@@ -19,8 +19,15 @@ export interface ScorecardData {
   avgStockReaction: number;
   guidanceRaisedCount: number;
   guidanceLoweredCount: number;
+  guidanceMaintainedCount: number;
+  netGuidance: number;
+  avgEpsGrowthYoy: number;
+  avgRevenueGrowthYoy: number;
+  avgGrossMargin: number;
+  avgOperatingMargin: number;
+  forwardEpsRevisionPct: number;
   bySector: SectorScorecard[];
-  byRegion: { region: string; totalCompanies: number; reportedCompanies: number; pctBeatingEps: number; pctBeatingRev: number }[];
+  byRegion: RegionScorecard[];
 }
 
 export interface SectorScorecard {
@@ -31,6 +38,26 @@ export interface SectorScorecard {
   pctBeatingRev: number;
   avgEpsSurprisePct: number;
   avgStockReaction: number;
+  avgEpsGrowthYoy: number;
+  avgRevenueGrowthYoy: number;
+  avgGrossMargin: number;
+  avgOperatingMargin: number;
+  pctGuidanceRaised: number;
+  pctGuidanceLowered: number;
+  forwardEpsRevisionPct: number;
+}
+
+export interface RegionScorecard {
+  region: string;
+  totalCompanies: number;
+  reportedCompanies: number;
+  pctBeatingEps: number;
+  pctBeatingRev: number;
+  avgEpsGrowthYoy: number;
+  avgRevenueGrowthYoy: number;
+  avgStockReaction: number;
+  pctGuidanceRaised: number;
+  pctGuidanceLowered: number;
 }
 
 export function useScorecard(quarter = 'Q1 2026') {

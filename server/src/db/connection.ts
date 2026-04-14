@@ -26,8 +26,8 @@ export async function getDb(): Promise<Database> {
     db = new SQL.Database();
   }
 
-  db.run('PRAGMA foreign_keys = ON');
-  return db;
+  db!.run('PRAGMA foreign_keys = ON');
+  return db!;
 }
 
 export function saveDb(): void {

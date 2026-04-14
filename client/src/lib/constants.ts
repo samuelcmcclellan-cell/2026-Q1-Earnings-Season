@@ -16,6 +16,11 @@ export const REGION_LABELS: Record<string, string> = {
   'us': 'United States',
   'europe': 'Europe',
   'asia': 'Asia',
+  'United States': 'United States',
+  'Europe': 'Europe',
+  'Japan': 'Japan',
+  'China': 'China',
+  'EM': 'Emerging Markets',
 };
 
 export const THEME_LABELS: Record<string, string> = {
@@ -35,5 +40,31 @@ export const THEME_LABELS: Record<string, string> = {
   'credit': 'Credit',
 };
 
+export const MARKET_CAP_LABELS: Record<string, string> = {
+  'mega': 'Mega Cap',
+  'large': 'Large Cap',
+  'mid': 'Mid Cap',
+  'small': 'Small Cap',
+  'Mega Cap': 'Mega Cap',
+  'Large Cap': 'Large Cap',
+  'Mid Cap': 'Mid Cap',
+  'Small Cap': 'Small Cap',
+};
+
+export const STYLE_LABELS: Record<string, string> = {
+  'growth': 'Growth',
+  'value': 'Value',
+  'blend': 'Blend',
+};
+
+export const DATA_SOURCE_LABELS: Record<string, string> = {
+  'seed': 'Estimated',
+  'fmp': 'FMP',
+  'finnhub': 'Finnhub',
+  'csv_import': 'Import',
+};
+
 export const SECTORS = Object.keys(SECTOR_COLORS);
 export const REGIONS = ['us', 'europe', 'asia'];
+export const STYLES = ['growth', 'value', 'blend'];
+export const MARKET_CAPS = ['mega', 'large', 'mid', 'small'];

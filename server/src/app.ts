@@ -8,6 +8,9 @@ import sectorsRoutes from './routes/sectors.routes.ts';
 import themesRoutes from './routes/themes.routes.ts';
 import commentaryRoutes from './routes/commentary.routes.ts';
 import aiRoutes from './routes/ai.routes.ts';
+import regionsRoutes from './routes/regions.routes.ts';
+import segmentsRoutes from './routes/segments.routes.ts';
+import marketRoutes from './routes/market.routes.ts';
 import { errorHandler } from './middleware/error-handler.ts';
 
 export function createApp() {
@@ -25,6 +28,9 @@ export function createApp() {
   app.use('/api/themes', themesRoutes);
   app.use('/api/commentary', commentaryRoutes);
   app.use('/api/ai', aiRoutes);
+  app.use('/api/regions', regionsRoutes);
+  app.use('/api/segments', segmentsRoutes);
+  app.use('/api/market', marketRoutes);
 
   // Health check
   app.get('/api/health', (_req, res) => {

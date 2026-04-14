@@ -10,6 +10,7 @@ export interface Company {
   region: string;
   country: string;
   market_cap_category: string;
+  style: string;
   index_membership: string | null;
 }
 

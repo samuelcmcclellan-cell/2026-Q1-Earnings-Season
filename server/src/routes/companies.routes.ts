@@ -4,10 +4,12 @@ import { getAllCompanies, getCompanyByTicker } from '../models/company.model.ts'
 const router = Router();
 
 router.get('/', async (req, res) => {
-  const { sector, region } = req.query;
+  const { sector, region, style, market_cap_category } = req.query;
   const companies = await getAllCompanies({
     sector: sector as string | undefined,
     region: region as string | undefined,
+    style: style as string | undefined,
+    market_cap_category: market_cap_category as string | undefined,
   });
   res.json(companies);
 });

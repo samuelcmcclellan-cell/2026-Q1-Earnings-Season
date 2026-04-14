@@ -49,3 +49,25 @@ export function classifyResult(actual: number | null, estimate: number | null): 
 export function cn(...classes: (string | boolean | undefined | null)[]): string {
   return classes.filter(Boolean).join(' ');
 }
+
+/** Returns the appropriate Tailwind text color class for a numeric value */
+export function numColor(v: number | null | undefined): string {
+  if (v === null || v === undefined) return 'text-text-muted';
+  if (v > 0) return 'text-accent-green';
+  if (v < 0) return 'text-accent-red';
+  return 'text-accent-amber';
+}
+
+/** Returns a formatted margin change string with direction */
+export function formatMarginChange(current: number | null, prior: number | null): string {
+  if (current === null || prior === null) return '--';
+  const diff = current - prior;
+  const sign = diff > 0 ? '+' : '';
+  return `${sign}${diff.toFixed(1)}pp`;
+}
+
+/** Returns forward revision % from current and 30d ago values */
+export function computeRevisionPct(current: number | null, prior: number | null): number | null {
+  if (current === null || prior === null || prior === 0) return null;
+  return ((current - prior) / Math.abs(prior)) * 100;
+}

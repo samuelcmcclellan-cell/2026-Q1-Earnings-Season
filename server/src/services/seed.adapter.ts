@@ -11,6 +11,7 @@ interface SeedCompany {
   region: string;
   country: string;
   market_cap_category: string;
+  style: string;
   index_membership: string | null;
 }
 
@@ -27,6 +28,23 @@ interface SeedEarnings {
   guidance_direction: string | null;
   stock_reaction_pct: number | null;
   status: string;
+  eps_actual_prior_year: number | null;
+  revenue_actual_prior_year: number | null;
+  eps_actual_prior_quarter: number | null;
+  revenue_actual_prior_quarter: number | null;
+  eps_growth_yoy: number | null;
+  revenue_growth_yoy: number | null;
+  eps_growth_qoq: number | null;
+  revenue_growth_qoq: number | null;
+  gross_margin: number | null;
+  operating_margin: number | null;
+  gross_margin_prior: number | null;
+  operating_margin_prior: number | null;
+  forward_eps_current: number | null;
+  forward_eps_30d_ago: number | null;
+  forward_revenue_current: number | null;
+  forward_revenue_30d_ago: number | null;
+  data_source: string;
 }
 
 export class SeedAdapter implements DataSourceAdapter {
@@ -68,7 +86,7 @@ export class SeedAdapter implements DataSourceAdapter {
   }
 
   async getQuote(_ticker: string): Promise<StockQuote | null> {
-    return null; // Seed data doesn't have live quotes
+    return null;
   }
 
   getCompanies(): SeedCompany[] {

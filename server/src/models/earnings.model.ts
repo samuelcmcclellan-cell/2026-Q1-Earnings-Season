@@ -15,6 +15,23 @@ export interface EarningsReport {
   guidance_direction: string | null;
   stock_reaction_pct: number | null;
   status: string;
+  eps_actual_prior_year: number | null;
+  revenue_actual_prior_year: number | null;
+  eps_actual_prior_quarter: number | null;
+  revenue_actual_prior_quarter: number | null;
+  eps_growth_yoy: number | null;
+  revenue_growth_yoy: number | null;
+  eps_growth_qoq: number | null;
+  revenue_growth_qoq: number | null;
+  gross_margin: number | null;
+  operating_margin: number | null;
+  gross_margin_prior: number | null;
+  operating_margin_prior: number | null;
+  forward_eps_current: number | null;
+  forward_eps_30d_ago: number | null;
+  forward_revenue_current: number | null;
+  forward_revenue_30d_ago: number | null;
+  data_source: string;
 }
 
 export interface EarningsWithCompany extends EarningsReport {
@@ -22,8 +39,10 @@ export interface EarningsWithCompany extends EarningsReport {
   name: string;
   sector: string;
   region: string;
+  country: string;
   industry: string;
   market_cap_category: string;
+  style: string;
 }
 
 export async function getEarnings(filters?: {
@@ -31,13 +50,15 @@ export async function getEarnings(filters?: {
   sector?: string;
   region?: string;
   quarter?: string;
+  style?: string;
+  market_cap_category?: string;
   limit?: number;
   offset?: number;
   sort?: string;
   order?: string;
 }): Promise<EarningsWithCompany[]> {
   const db = await getDb();
-  let sql = `SELECT e.*, c.ticker, c.name, c.sector, c.region, c.industry, c.market_cap_category
+  let sql = `SELECT e.*, c.ticker, c.name, c.sector, c.region, c.country, c.industry, c.market_cap_category, c.style
              FROM earnings_reports e
              JOIN companies c ON e.company_id = c.id`;
   const conditions: string[] = [];
@@ -59,11 +80,20 @@ export async function getEarnings(filters?: {
     conditions.push('e.fiscal_quarter = ?');
     params.push(filters.quarter);
   }
+  if (filters?.style) {
+    conditions.push('c.style = ?');
+    params.push(filters.style);
+  }
+  if (filters?.market_cap_category) {
+    conditions.push('c.market_cap_category = ?');
+    params.push(filters.market_cap_category);
+  }
   if (conditions.length) {
     sql += ' WHERE ' + conditions.join(' AND ');
   }
 
-  const sortCol = filters?.sort || 'report_date';
+  const allowedSorts = new Set(['report_date', 'ticker', 'sector', 'eps_surprise_pct', 'revenue_surprise_pct', 'stock_reaction_pct', 'eps_growth_yoy', 'revenue_growth_yoy', 'gross_margin', 'operating_margin']);
+  const sortCol = allowedSorts.has(filters?.sort || '') ? filters!.sort : 'report_date';
   const sortOrder = filters?.order === 'asc' ? 'ASC' : 'DESC';
   sql += ` ORDER BY e.${sortCol} ${sortOrder}`;
 
@@ -88,7 +118,7 @@ export async function getEarnings(filters?: {
 export async function getEarningsByTicker(ticker: string): Promise<EarningsWithCompany[]> {
   const db = await getDb();
   const stmt = db.prepare(
-    `SELECT e.*, c.ticker, c.name, c.sector, c.region, c.industry, c.market_cap_category
+    `SELECT e.*, c.ticker, c.name, c.sector, c.region, c.country, c.industry, c.market_cap_category, c.style
      FROM earnings_reports e
      JOIN companies c ON e.company_id = c.id
      WHERE c.ticker = ?
@@ -111,11 +141,17 @@ export async function getRecentEarnings(limit = 10): Promise<EarningsWithCompany
 export async function upsertEarningsReport(companyId: number, data: Partial<EarningsReport>): Promise<void> {
   const db = await getDb();
   db.run(
-    `INSERT INTO earnings_reports (company_id, fiscal_quarter, report_date, time_of_day, eps_estimate, eps_actual, revenue_estimate, revenue_actual, eps_surprise_pct, revenue_surprise_pct, guidance_direction, stock_reaction_pct, status)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    `INSERT INTO earnings_reports (company_id, fiscal_quarter, report_date, time_of_day,
+       eps_estimate, eps_actual, revenue_estimate, revenue_actual,
+       eps_surprise_pct, revenue_surprise_pct, guidance_direction, stock_reaction_pct, status,
+       eps_actual_prior_year, revenue_actual_prior_year, eps_actual_prior_quarter, revenue_actual_prior_quarter,
+       eps_growth_yoy, revenue_growth_yoy, eps_growth_qoq, revenue_growth_qoq,
+       gross_margin, operating_margin, gross_margin_prior, operating_margin_prior,
+       forward_eps_current, forward_eps_30d_ago, forward_revenue_current, forward_revenue_30d_ago,
+       data_source)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
      ON CONFLICT(company_id, fiscal_quarter) DO UPDATE SET
        report_date = COALESCE(excluded.report_date, earnings_reports.report_date),
-       time_of_day = COALESCE(excluded.time_of_day, earnings_reports.time_of_day),
        eps_estimate = COALESCE(excluded.eps_estimate, earnings_reports.eps_estimate),
        eps_actual = COALESCE(excluded.eps_actual, earnings_reports.eps_actual),
        revenue_estimate = COALESCE(excluded.revenue_estimate, earnings_reports.revenue_estimate),
@@ -125,6 +161,11 @@ export async function upsertEarningsReport(companyId: number, data: Partial<Earn
        guidance_direction = COALESCE(excluded.guidance_direction, earnings_reports.guidance_direction),
        stock_reaction_pct = COALESCE(excluded.stock_reaction_pct, earnings_reports.stock_reaction_pct),
        status = COALESCE(excluded.status, earnings_reports.status),
+       eps_growth_yoy = COALESCE(excluded.eps_growth_yoy, earnings_reports.eps_growth_yoy),
+       revenue_growth_yoy = COALESCE(excluded.revenue_growth_yoy, earnings_reports.revenue_growth_yoy),
+       gross_margin = COALESCE(excluded.gross_margin, earnings_reports.gross_margin),
+       operating_margin = COALESCE(excluded.operating_margin, earnings_reports.operating_margin),
+       data_source = COALESCE(excluded.data_source, earnings_reports.data_source),
        updated_at = datetime('now')`,
     [
       companyId,
@@ -140,6 +181,23 @@ export async function upsertEarningsReport(companyId: number, data: Partial<Earn
       data.guidance_direction || null,
       data.stock_reaction_pct ?? null,
       data.status || 'upcoming',
+      data.eps_actual_prior_year ?? null,
+      data.revenue_actual_prior_year ?? null,
+      data.eps_actual_prior_quarter ?? null,
+      data.revenue_actual_prior_quarter ?? null,
+      data.eps_growth_yoy ?? null,
+      data.revenue_growth_yoy ?? null,
+      data.eps_growth_qoq ?? null,
+      data.revenue_growth_qoq ?? null,
+      data.gross_margin ?? null,
+      data.operating_margin ?? null,
+      data.gross_margin_prior ?? null,
+      data.operating_margin_prior ?? null,
+      data.forward_eps_current ?? null,
+      data.forward_eps_30d_ago ?? null,
+      data.forward_revenue_current ?? null,
+      data.forward_revenue_30d_ago ?? null,
+      data.data_source || 'seed',
     ]
   );
 }

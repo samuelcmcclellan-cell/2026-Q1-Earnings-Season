@@ -2,25 +2,37 @@ import { ScoreboardStrip } from '../components/dashboard/ScoreboardStrip';
 import { RecentReporters } from '../components/dashboard/RecentReporters';
 import { WeeklyPreview } from '../components/dashboard/WeeklyPreview';
 import { SectorSummary } from '../components/dashboard/SectorSummary';
-import { BeatMissBar } from '../components/charts/BeatMissBar';
-import { ReactionScatter } from '../components/charts/ReactionScatter';
+import { RegionalSnapshot } from '../components/dashboard/RegionalSnapshot';
+import { LatestCommentary } from '../components/dashboard/LatestCommentary';
+import { GrowthBySector } from '../components/charts/GrowthBySector';
+import { MarginTrends } from '../components/charts/MarginTrends';
 
 export function DashboardPage() {
   return (
-    <div className="space-y-4">
+    <div className="space-y-3">
+      {/* Row 1: KPI strip */}
       <ScoreboardStrip />
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-        <RecentReporters />
+      {/* Row 2: Growth by sector + Margin trends */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
+        <GrowthBySector />
+        <MarginTrends />
+      </div>
+
+      {/* Row 3: Regional snapshot + Sector summary */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
+        <RegionalSnapshot />
+        <SectorSummary />
+      </div>
+
+      {/* Row 4: Latest commentary + This week's reporters */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
+        <LatestCommentary />
         <WeeklyPreview />
       </div>
 
-      <SectorSummary />
-
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-        <BeatMissBar />
-        <ReactionScatter />
-      </div>
+      {/* Row 5: Recent reports */}
+      <RecentReporters />
     </div>
   );
 }

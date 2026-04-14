@@ -22,10 +22,13 @@ function queryOne(sql: string, params: any[] = []): any | null {
   return rows[0] || null;
 }
 
+function avgArr(a: number[]): number {
+  return a.length ? a.reduce((s, v) => s + v, 0) / a.length : 0;
+}
+
 async function getApp() {
   if (app) return app;
 
-  // Load WASM binary explicitly for serverless environments
   const wasmPath = path.join(process.cwd(), 'server/data/sql-wasm.wasm');
   const initOptions: any = {};
   if (fs.existsSync(wasmPath)) {
@@ -57,6 +60,8 @@ async function getApp() {
     const params: any[] = [];
     if (req.query.sector) { sql += ' AND sector = ?'; params.push(req.query.sector); }
     if (req.query.region) { sql += ' AND region = ?'; params.push(req.query.region); }
+    if (req.query.style) { sql += ' AND style = ?'; params.push(req.query.style); }
+    if (req.query.market_cap_category) { sql += ' AND market_cap_category = ?'; params.push(req.query.market_cap_category); }
     sql += ' ORDER BY ticker';
     res.json(queryAll(sql, params));
   });
@@ -69,7 +74,7 @@ async function getApp() {
 
   // Calendar
   app.get('/api/calendar', (req, res) => {
-    let sql = `SELECT e.*, c.ticker, c.name, c.sector, c.region, c.market_cap_category
+    let sql = `SELECT e.*, c.ticker, c.name, c.sector, c.region, c.market_cap_category, c.style
                FROM earnings_reports e JOIN companies c ON e.company_id = c.id WHERE 1=1`;
     const params: any[] = [];
     if (req.query.from) { sql += ' AND e.report_date >= ?'; params.push(req.query.from); }
@@ -83,7 +88,7 @@ async function getApp() {
     const today = new Date().toISOString().split('T')[0];
     const future = new Date(Date.now() + days * 86400000).toISOString().split('T')[0];
     res.json(queryAll(
-      `SELECT e.*, c.ticker, c.name, c.sector, c.region, c.market_cap_category
+      `SELECT e.*, c.ticker, c.name, c.sector, c.region, c.market_cap_category, c.style
        FROM earnings_reports e JOIN companies c ON e.company_id = c.id
        WHERE e.report_date >= ? AND e.report_date <= ?
        ORDER BY e.report_date, c.ticker`, [today, future]
@@ -96,7 +101,7 @@ async function getApp() {
     const mon = new Date(d); mon.setDate(d.getDate() - (day === 0 ? 6 : day - 1));
     const fri = new Date(mon); fri.setDate(mon.getDate() + 4);
     res.json(queryAll(
-      `SELECT e.*, c.ticker, c.name, c.sector, c.region, c.market_cap_category
+      `SELECT e.*, c.ticker, c.name, c.sector, c.region, c.market_cap_category, c.style
        FROM earnings_reports e JOIN companies c ON e.company_id = c.id
        WHERE e.report_date >= ? AND e.report_date <= ?
        ORDER BY e.report_date, c.ticker`,
@@ -106,15 +111,15 @@ async function getApp() {
 
   // Earnings
   app.get('/api/earnings', (req, res) => {
-    let sql = `SELECT e.*, c.ticker, c.name, c.sector, c.region, c.industry, c.market_cap_category
+    let sql = `SELECT e.*, c.ticker, c.name, c.sector, c.region, c.country, c.industry, c.market_cap_category, c.style
                FROM earnings_reports e JOIN companies c ON e.company_id = c.id WHERE 1=1`;
     const params: any[] = [];
     if (req.query.status) { sql += ' AND e.status = ?'; params.push(req.query.status); }
     if (req.query.sector) { sql += ' AND c.sector = ?'; params.push(req.query.sector); }
     if (req.query.region) { sql += ' AND c.region = ?'; params.push(req.query.region); }
-    const sort = req.query.sort || 'report_date';
-    const order = req.query.order === 'asc' ? 'ASC' : 'DESC';
-    sql += ` ORDER BY e.${sort === 'ticker' ? 'report_date' : sort} ${order}`;
+    if (req.query.style) { sql += ' AND c.style = ?'; params.push(req.query.style); }
+    if (req.query.market_cap_category) { sql += ' AND c.market_cap_category = ?'; params.push(req.query.market_cap_category); }
+    sql += ' ORDER BY e.report_date DESC';
     const limit = parseInt(req.query.limit as string) || 200;
     const offset = parseInt(req.query.offset as string) || 0;
     sql += ' LIMIT ? OFFSET ?';
@@ -125,7 +130,7 @@ async function getApp() {
   app.get('/api/earnings/recent', (req, res) => {
     const limit = parseInt(req.query.limit as string) || 10;
     res.json(queryAll(
-      `SELECT e.*, c.ticker, c.name, c.sector, c.region, c.industry, c.market_cap_category
+      `SELECT e.*, c.ticker, c.name, c.sector, c.region, c.country, c.industry, c.market_cap_category, c.style
        FROM earnings_reports e JOIN companies c ON e.company_id = c.id
        WHERE e.status = 'reported' ORDER BY e.report_date DESC, c.ticker LIMIT ?`, [limit]
     ));
@@ -133,7 +138,7 @@ async function getApp() {
 
   app.get('/api/earnings/:ticker', (req, res) => {
     res.json(queryAll(
-      `SELECT e.*, c.ticker, c.name, c.sector, c.region, c.industry, c.market_cap_category
+      `SELECT e.*, c.ticker, c.name, c.sector, c.region, c.country, c.industry, c.market_cap_category, c.style
        FROM earnings_reports e JOIN companies c ON e.company_id = c.id
        WHERE c.ticker = ? ORDER BY e.report_date DESC`, [req.params.ticker.toUpperCase()]
     ));
@@ -143,12 +148,13 @@ async function getApp() {
   app.get('/api/scorecard', (req, res) => {
     const quarter = (req.query.quarter as string) || 'Q1 2026';
     const all = queryAll(
-      `SELECT e.*, c.sector, c.region FROM earnings_reports e
+      `SELECT e.*, c.sector, c.region, c.style, c.market_cap_category FROM earnings_reports e
        JOIN companies c ON e.company_id = c.id WHERE e.fiscal_quarter = ?`, [quarter]
     );
     const reported = all.filter((e: any) => e.status === 'reported');
     let epsBeat = 0, epsMiss = 0, epsMeet = 0, revBeat = 0, revMiss = 0, revMeet = 0;
-    let epsSum = 0, revSum = 0, rxnSum = 0, epsN = 0, revN = 0, rxnN = 0, gUp = 0, gDown = 0;
+    let epsSum = 0, revSum = 0, rxnSum = 0, epsN = 0, revN = 0, rxnN = 0, gUp = 0, gDown = 0, gMaint = 0;
+    const epsGrowthYoy: number[] = [], revGrowthYoy: number[] = [], grossMargins: number[] = [], opMargins: number[] = [], fwdRevisions: number[] = [];
     for (const e of reported) {
       if (e.eps_surprise_pct != null) {
         if (e.eps_surprise_pct > 0.5) epsBeat++; else if (e.eps_surprise_pct < -0.5) epsMiss++; else epsMeet++;
@@ -161,6 +167,13 @@ async function getApp() {
       if (e.stock_reaction_pct != null) { rxnSum += e.stock_reaction_pct; rxnN++; }
       if (e.guidance_direction === 'raised') gUp++;
       if (e.guidance_direction === 'lowered') gDown++;
+      if (e.guidance_direction === 'maintained') gMaint++;
+      if (e.eps_growth_yoy != null) epsGrowthYoy.push(e.eps_growth_yoy);
+      if (e.revenue_growth_yoy != null) revGrowthYoy.push(e.revenue_growth_yoy);
+      if (e.gross_margin != null) grossMargins.push(e.gross_margin);
+      if (e.operating_margin != null) opMargins.push(e.operating_margin);
+      if (e.forward_eps_current != null && e.forward_eps_30d_ago != null && e.forward_eps_30d_ago !== 0)
+        fwdRevisions.push(((e.forward_eps_current - e.forward_eps_30d_ago) / Math.abs(e.forward_eps_30d_ago)) * 100);
     }
     const sectorMap = new Map<string, any[]>();
     for (const e of all) { const l = sectorMap.get(e.sector) || []; l.push(e); sectorMap.set(e.sector, l); }
@@ -168,12 +181,25 @@ async function getApp() {
       const sr = entries.filter((e: any) => e.status === 'reported');
       const sEB = sr.filter((e: any) => e.eps_surprise_pct != null && e.eps_surprise_pct > 0.5).length;
       const sRB = sr.filter((e: any) => e.revenue_surprise_pct != null && e.revenue_surprise_pct > 0.5).length;
+      const sEpsGrowth = sr.filter((e: any) => e.eps_growth_yoy != null).map((e: any) => e.eps_growth_yoy);
+      const sRevGrowth = sr.filter((e: any) => e.revenue_growth_yoy != null).map((e: any) => e.revenue_growth_yoy);
+      const sGM = sr.filter((e: any) => e.gross_margin != null).map((e: any) => e.gross_margin);
+      const sOM = sr.filter((e: any) => e.operating_margin != null).map((e: any) => e.operating_margin);
+      const sGR = sr.filter((e: any) => e.guidance_direction === 'raised').length;
+      const sGL = sr.filter((e: any) => e.guidance_direction === 'lowered').length;
+      const sFwd = sr.filter((e: any) => e.forward_eps_current != null && e.forward_eps_30d_ago != null && e.forward_eps_30d_ago !== 0)
+        .map((e: any) => ((e.forward_eps_current - e.forward_eps_30d_ago) / Math.abs(e.forward_eps_30d_ago)) * 100);
       return {
         sector, totalCompanies: entries.length, reportedCompanies: sr.length,
         pctBeatingEps: sr.length ? (sEB / sr.length) * 100 : 0,
         pctBeatingRev: sr.length ? (sRB / sr.length) * 100 : 0,
-        avgEpsSurprisePct: sr.length ? sr.reduce((a: number, e: any) => a + (e.eps_surprise_pct || 0), 0) / sr.length : 0,
-        avgStockReaction: sr.length ? sr.reduce((a: number, e: any) => a + (e.stock_reaction_pct || 0), 0) / sr.length : 0,
+        avgEpsSurprisePct: avgArr(sr.filter((e: any) => e.eps_surprise_pct != null).map((e: any) => e.eps_surprise_pct)),
+        avgStockReaction: avgArr(sr.filter((e: any) => e.stock_reaction_pct != null).map((e: any) => e.stock_reaction_pct)),
+        avgEpsGrowthYoy: avgArr(sEpsGrowth), avgRevenueGrowthYoy: avgArr(sRevGrowth),
+        avgGrossMargin: avgArr(sGM), avgOperatingMargin: avgArr(sOM),
+        pctGuidanceRaised: sr.length ? (sGR / sr.length) * 100 : 0,
+        pctGuidanceLowered: sr.length ? (sGL / sr.length) * 100 : 0,
+        forwardEpsRevisionPct: avgArr(sFwd),
       };
     }).sort((a, b) => a.sector.localeCompare(b.sector));
     const regionMap = new Map<string, any[]>();
@@ -184,6 +210,11 @@ async function getApp() {
         region, totalCompanies: entries.length, reportedCompanies: rr.length,
         pctBeatingEps: rr.length ? (rr.filter((e: any) => e.eps_surprise_pct != null && e.eps_surprise_pct > 0.5).length / rr.length) * 100 : 0,
         pctBeatingRev: rr.length ? (rr.filter((e: any) => e.revenue_surprise_pct != null && e.revenue_surprise_pct > 0.5).length / rr.length) * 100 : 0,
+        avgEpsGrowthYoy: avgArr(rr.filter((e: any) => e.eps_growth_yoy != null).map((e: any) => e.eps_growth_yoy)),
+        avgRevenueGrowthYoy: avgArr(rr.filter((e: any) => e.revenue_growth_yoy != null).map((e: any) => e.revenue_growth_yoy)),
+        avgStockReaction: avgArr(rr.filter((e: any) => e.stock_reaction_pct != null).map((e: any) => e.stock_reaction_pct)),
+        pctGuidanceRaised: rr.length ? (rr.filter((e: any) => e.guidance_direction === 'raised').length / rr.length) * 100 : 0,
+        pctGuidanceLowered: rr.length ? (rr.filter((e: any) => e.guidance_direction === 'lowered').length / rr.length) * 100 : 0,
       };
     });
     res.json({
@@ -196,7 +227,12 @@ async function getApp() {
       avgEpsSurprisePct: epsN ? epsSum / epsN : 0,
       avgRevSurprisePct: revN ? revSum / revN : 0,
       avgStockReaction: rxnN ? rxnSum / rxnN : 0,
-      guidanceRaisedCount: gUp, guidanceLoweredCount: gDown, bySector, byRegion,
+      guidanceRaisedCount: gUp, guidanceLoweredCount: gDown,
+      guidanceMaintainedCount: gMaint, netGuidance: gUp - gDown,
+      avgEpsGrowthYoy: avgArr(epsGrowthYoy), avgRevenueGrowthYoy: avgArr(revGrowthYoy),
+      avgGrossMargin: avgArr(grossMargins), avgOperatingMargin: avgArr(opMargins),
+      forwardEpsRevisionPct: avgArr(fwdRevisions),
+      bySector, byRegion,
     });
   });
 
@@ -215,11 +251,82 @@ async function getApp() {
     const quarter = (req.query.quarter as string) || 'Q1 2026';
     const score = queryOne('SELECT * FROM sector_scores WHERE sector = ? AND fiscal_quarter = ?', [req.params.sector, quarter]);
     const earnings = queryAll(
-      `SELECT e.*, c.ticker, c.name FROM earnings_reports e
+      `SELECT e.*, c.ticker, c.name, c.sector, c.region, c.country, c.industry, c.market_cap_category, c.style FROM earnings_reports e
        JOIN companies c ON e.company_id = c.id
        WHERE c.sector = ? AND e.fiscal_quarter = ? ORDER BY e.report_date`, [req.params.sector, quarter]
     );
     res.json({ score, earnings });
+  });
+
+  // Regions
+  app.get('/api/regions', (req, res) => {
+    const quarter = (req.query.quarter as string) || 'Q1 2026';
+    const all = queryAll(`SELECT e.*, c.region, c.country FROM earnings_reports e JOIN companies c ON e.company_id = c.id WHERE e.fiscal_quarter = ?`, [quarter]);
+    const mapR = (r: string, c: string) => r === 'us' ? 'United States' : r === 'europe' ? 'Europe' : c === 'JP' ? 'Japan' : (c === 'CN' || c === 'HK') ? 'China' : 'EM';
+    const rm = new Map<string, any[]>();
+    for (const e of all) { const rn = mapR(e.region, e.country); const l = rm.get(rn) || []; l.push(e); rm.set(rn, l); }
+    const regions = Array.from(rm.entries()).map(([region, entries]) => {
+      const rpt = entries.filter((e: any) => e.status === 'reported');
+      return {
+        region, totalCompanies: entries.length, reportedCompanies: rpt.length,
+        pctBeatingEps: rpt.length ? (rpt.filter((e: any) => e.eps_surprise_pct > 0.5).length / rpt.length) * 100 : 0,
+        pctBeatingRev: rpt.length ? (rpt.filter((e: any) => e.revenue_surprise_pct > 0.5).length / rpt.length) * 100 : 0,
+        avgEpsGrowthYoy: avgArr(rpt.filter((e: any) => e.eps_growth_yoy != null).map((e: any) => e.eps_growth_yoy)),
+        avgRevenueGrowthYoy: avgArr(rpt.filter((e: any) => e.revenue_growth_yoy != null).map((e: any) => e.revenue_growth_yoy)),
+        avgStockReaction: avgArr(rpt.filter((e: any) => e.stock_reaction_pct != null).map((e: any) => e.stock_reaction_pct)),
+        pctGuidanceRaised: rpt.length ? (rpt.filter((e: any) => e.guidance_direction === 'raised').length / rpt.length) * 100 : 0,
+        pctGuidanceLowered: rpt.length ? (rpt.filter((e: any) => e.guidance_direction === 'lowered').length / rpt.length) * 100 : 0,
+      };
+    }).sort((a, b) => b.totalCompanies - a.totalCompanies);
+    res.json(regions);
+  });
+
+  app.get('/api/regions/:regionName', (req, res) => {
+    const quarter = (req.query.quarter as string) || 'Q1 2026';
+    const regionName = req.params.regionName;
+    const mapR = (r: string, c: string) => r === 'us' ? 'United States' : r === 'europe' ? 'Europe' : c === 'JP' ? 'Japan' : (c === 'CN' || c === 'HK') ? 'China' : 'EM';
+    const all = queryAll(
+      `SELECT e.*, c.ticker, c.name, c.sector, c.region, c.country, c.market_cap_category, c.style, c.industry FROM earnings_reports e
+       JOIN companies c ON e.company_id = c.id WHERE e.fiscal_quarter = ?`, [quarter]);
+    const filtered = all.filter((e: any) => mapR(e.region, e.country) === regionName);
+    const rpt = filtered.filter((e: any) => e.status === 'reported');
+    res.json({
+      region: regionName, totalCompanies: filtered.length, reportedCompanies: rpt.length,
+      avgEpsGrowthYoy: avgArr(rpt.filter((e: any) => e.eps_growth_yoy != null).map((e: any) => e.eps_growth_yoy)),
+      avgRevenueGrowthYoy: avgArr(rpt.filter((e: any) => e.revenue_growth_yoy != null).map((e: any) => e.revenue_growth_yoy)),
+      companies: filtered,
+    });
+  });
+
+  // Segments
+  app.get('/api/segments', (req, res) => {
+    const quarter = (req.query.quarter as string) || 'Q1 2026';
+    const all = queryAll(`SELECT e.*, c.market_cap_category, c.style FROM earnings_reports e JOIN companies c ON e.company_id = c.id WHERE e.fiscal_quarter = ?`, [quarter]);
+    const mapCap = (c: string) => c === 'mega' ? 'Mega Cap' : c === 'large' ? 'Large Cap' : c === 'mid' ? 'Mid Cap' : 'Small Cap';
+    const computeMetrics = (entries: any[]) => {
+      const rpt = entries.filter((e: any) => e.status === 'reported');
+      return {
+        totalCompanies: entries.length, reportedCompanies: rpt.length,
+        pctBeatingEps: rpt.length ? (rpt.filter((e: any) => e.eps_surprise_pct > 0.5).length / rpt.length) * 100 : 0,
+        pctBeatingRev: rpt.length ? (rpt.filter((e: any) => e.revenue_surprise_pct > 0.5).length / rpt.length) * 100 : 0,
+        avgEpsGrowthYoy: avgArr(rpt.filter((e: any) => e.eps_growth_yoy != null).map((e: any) => e.eps_growth_yoy)),
+        avgRevenueGrowthYoy: avgArr(rpt.filter((e: any) => e.revenue_growth_yoy != null).map((e: any) => e.revenue_growth_yoy)),
+        avgGrossMargin: avgArr(rpt.filter((e: any) => e.gross_margin != null).map((e: any) => e.gross_margin)),
+        avgOperatingMargin: avgArr(rpt.filter((e: any) => e.operating_margin != null).map((e: any) => e.operating_margin)),
+        avgStockReaction: avgArr(rpt.filter((e: any) => e.stock_reaction_pct != null).map((e: any) => e.stock_reaction_pct)),
+        pctGuidanceRaised: rpt.length ? (rpt.filter((e: any) => e.guidance_direction === 'raised').length / rpt.length) * 100 : 0,
+        pctGuidanceLowered: rpt.length ? (rpt.filter((e: any) => e.guidance_direction === 'lowered').length / rpt.length) * 100 : 0,
+      };
+    };
+    const cm = new Map<string, any[]>(), sm = new Map<string, any[]>();
+    for (const e of all) {
+      const cap = mapCap(e.market_cap_category); (cm.get(cap) || (cm.set(cap, []), cm.get(cap)!)).push(e);
+      const st = (e.style || 'blend').charAt(0).toUpperCase() + (e.style || 'blend').slice(1);
+      (sm.get(st) || (sm.set(st, []), sm.get(st)!)).push(e);
+    }
+    const byMarketCap = Array.from(cm.entries()).map(([s, e]) => ({ segment: s, ...computeMetrics(e) })).sort((a, b) => b.totalCompanies - a.totalCompanies);
+    const byStyle = Array.from(sm.entries()).map(([s, e]) => ({ segment: s, ...computeMetrics(e) })).sort((a, b) => b.totalCompanies - a.totalCompanies);
+    res.json({ byMarketCap, byStyle });
   });
 
   // Themes
@@ -256,7 +363,7 @@ async function getApp() {
     res.json(queryAll(sql, params));
   });
 
-  // AI (returns error in serverless — requires ANTHROPIC_API_KEY)
+  // AI
   app.get('/api/ai/analyze', (_req, res) => {
     res.setHeader('Content-Type', 'text/event-stream');
     res.setHeader('Cache-Control', 'no-cache');

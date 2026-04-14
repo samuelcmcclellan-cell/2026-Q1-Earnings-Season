@@ -14,9 +14,11 @@ export interface CommentaryEntry {
   sector: string;
 }
 
-export function useCommentary(filters?: { theme?: string; limit?: number }) {
+export function useCommentary(filters?: { theme?: string; sector?: string; region?: string; limit?: number }) {
   const params = new URLSearchParams();
   if (filters?.theme) params.set('theme', filters.theme);
+  if (filters?.sector) params.set('sector', filters.sector);
+  if (filters?.region) params.set('region', filters.region);
   if (filters?.limit) params.set('limit', String(filters.limit));
   const qs = params.toString();
 

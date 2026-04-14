@@ -9,7 +9,8 @@
     "dev": "concurrently -n server,client -c blue,green \"npm run dev -w server\" \"npm run dev -w client\"",
     "build": "npm run build -w server && npm run build -w client",
     "seed": "npm run seed -w server",
-    "ingest": "npm run ingest -w server"
+    "ingest": "node --experimental-transform-types scripts/ingest-csv.ts",
+    "refresh": "node --experimental-transform-types scripts/refresh-data.ts"
   },
   "devDependencies": {
     "concurrently": "^9.2.1",

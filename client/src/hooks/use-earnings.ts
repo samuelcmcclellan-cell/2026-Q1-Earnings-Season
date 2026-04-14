@@ -20,21 +20,44 @@ export interface EarningsEntry {
   name: string;
   sector: string;
   region: string;
+  country: string;
   industry: string;
   market_cap_category: string;
+  style: string;
+  eps_growth_yoy: number | null;
+  revenue_growth_yoy: number | null;
+  eps_growth_qoq: number | null;
+  revenue_growth_qoq: number | null;
+  gross_margin: number | null;
+  operating_margin: number | null;
+  gross_margin_prior: number | null;
+  operating_margin_prior: number | null;
+  forward_eps_current: number | null;
+  forward_eps_30d_ago: number | null;
+  forward_revenue_current: number | null;
+  forward_revenue_30d_ago: number | null;
+  data_source: string;
 }
 
 export function useEarnings(filters?: {
   status?: string;
   sector?: string;
   region?: string;
+  style?: string;
+  market_cap_category?: string;
   limit?: number;
+  sort?: string;
+  order?: string;
 }) {
   const params = new URLSearchParams();
   if (filters?.status) params.set('status', filters.status);
   if (filters?.sector) params.set('sector', filters.sector);
   if (filters?.region) params.set('region', filters.region);
+  if (filters?.style) params.set('style', filters.style);
+  if (filters?.market_cap_category) params.set('market_cap_category', filters.market_cap_category);
   if (filters?.limit) params.set('limit', String(filters.limit));
+  if (filters?.sort) params.set('sort', filters.sort);
+  if (filters?.order) params.set('order', filters.order);
 
   const qs = params.toString();
   return useQuery({
