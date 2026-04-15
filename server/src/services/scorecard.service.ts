@@ -20,11 +20,20 @@ export interface ScorecardData {
   guidanceLoweredCount: number;
   guidanceMaintainedCount: number;
   netGuidance: number;
+  // Reported-only growth (actuals, small N)
   avgEpsGrowthYoy: number;
   avgRevenueGrowthYoy: number;
   avgGrossMargin: number;
   avgOperatingMargin: number;
   forwardEpsRevisionPct: number;
+  // Expected: consensus estimates vs prior-year actuals (all companies using estimates)
+  expectedEpsGrowthYoy: number;
+  expectedRevGrowthYoy: number;
+  expectedCompaniesIncluded: number;
+  // Blended: actuals where reported, estimates elsewhere — running season average
+  blendedEpsGrowthYoy: number;
+  blendedRevGrowthYoy: number;
+  blendedCompaniesIncluded: number;
   bySector: SectorScorecard[];
   byRegion: RegionScorecard[];
 }
@@ -44,6 +53,10 @@ export interface SectorScorecard {
   pctGuidanceRaised: number;
   pctGuidanceLowered: number;
   forwardEpsRevisionPct: number;
+  expectedEpsGrowthYoy: number;
+  expectedRevGrowthYoy: number;
+  blendedEpsGrowthYoy: number;
+  blendedRevGrowthYoy: number;
 }
 
 export interface RegionScorecard {
@@ -57,6 +70,10 @@ export interface RegionScorecard {
   avgStockReaction: number;
   pctGuidanceRaised: number;
   pctGuidanceLowered: number;
+  expectedEpsGrowthYoy: number;
+  expectedRevGrowthYoy: number;
+  blendedEpsGrowthYoy: number;
+  blendedRevGrowthYoy: number;
 }
 
 function queryAll(db: any, sql: string, params: any[] = []): any[] {
@@ -72,6 +89,51 @@ function queryAll(db: any, sql: string, params: any[] = []): any[] {
 
 function avg(arr: number[]): number {
   return arr.length > 0 ? arr.reduce((a, b) => a + b, 0) / arr.length : 0;
+}
+
+/** Growth vs prior-year. Returns null when data is insufficient. */
+function growthVsPrior(current: number | null, prior: number | null): number | null {
+  if (current == null || prior == null || prior === 0) return null;
+  return ((current - prior) / Math.abs(prior)) * 100;
+}
+
+/**
+ * Compute expected and blended growth arrays for a set of earnings entries.
+ *
+ * Expected = always uses eps_estimate (pre-season consensus benchmark).
+ * Blended  = uses eps_actual for reported companies, eps_estimate for upcoming.
+ */
+function computeExpectedBlended(entries: any[]): {
+  expectedEpsGrowths: number[];
+  expectedRevGrowths: number[];
+  blendedEpsGrowths: number[];
+  blendedRevGrowths: number[];
+} {
+  const expectedEpsGrowths: number[] = [];
+  const expectedRevGrowths: number[] = [];
+  const blendedEpsGrowths: number[] = [];
+  const blendedRevGrowths: number[] = [];
+
+  for (const e of entries) {
+    // Expected: always estimate vs prior year
+    const expEpsGrowth = growthVsPrior(e.eps_estimate, e.eps_actual_prior_year);
+    if (expEpsGrowth !== null) expectedEpsGrowths.push(expEpsGrowth);
+
+    const expRevGrowth = growthVsPrior(e.revenue_estimate, e.revenue_actual_prior_year);
+    if (expRevGrowth !== null) expectedRevGrowths.push(expRevGrowth);
+
+    // Blended: actuals for reported, estimates for upcoming
+    const blendedEps = e.status === 'reported' ? (e.eps_actual ?? e.eps_estimate) : e.eps_estimate;
+    const blendedRev = e.status === 'reported' ? (e.revenue_actual ?? e.revenue_estimate) : e.revenue_estimate;
+
+    const blndEpsGrowth = growthVsPrior(blendedEps, e.eps_actual_prior_year);
+    if (blndEpsGrowth !== null) blendedEpsGrowths.push(blndEpsGrowth);
+
+    const blndRevGrowth = growthVsPrior(blendedRev, e.revenue_actual_prior_year);
+    if (blndRevGrowth !== null) blendedRevGrowths.push(blndRevGrowth);
+  }
+
+  return { expectedEpsGrowths, expectedRevGrowths, blendedEpsGrowths, blendedRevGrowths };
 }
 
 export async function computeScorecard(quarter = 'Q1 2026'): Promise<ScorecardData> {
@@ -128,6 +190,10 @@ export async function computeScorecard(quarter = 'Q1 2026'): Promise<ScorecardDa
     }
   }
 
+  // Expected & blended for the whole season
+  const { expectedEpsGrowths, expectedRevGrowths, blendedEpsGrowths, blendedRevGrowths } =
+    computeExpectedBlended(allEarnings);
+
   // Sector breakdown
   const sectorMap = new Map<string, typeof allEarnings>();
   for (const e of allEarnings) {
@@ -150,6 +216,9 @@ export async function computeScorecard(quarter = 'Q1 2026'): Promise<ScorecardDa
     const sFwdRev = sReported.filter(e => e.forward_eps_current !== null && e.forward_eps_30d_ago !== null && e.forward_eps_30d_ago !== 0)
       .map(e => ((e.forward_eps_current - e.forward_eps_30d_ago) / Math.abs(e.forward_eps_30d_ago)) * 100);
 
+    const { expectedEpsGrowths: sExpEps, expectedRevGrowths: sExpRev,
+            blendedEpsGrowths: sBlndEps, blendedRevGrowths: sBlndRev } = computeExpectedBlended(entries);
+
     bySector.push({
       sector,
       totalCompanies: entries.length,
@@ -165,6 +234,10 @@ export async function computeScorecard(quarter = 'Q1 2026'): Promise<ScorecardDa
       pctGuidanceRaised: sReported.length > 0 ? (sGuidanceR / sReported.length) * 100 : 0,
       pctGuidanceLowered: sReported.length > 0 ? (sGuidanceL / sReported.length) * 100 : 0,
       forwardEpsRevisionPct: avg(sFwdRev),
+      expectedEpsGrowthYoy: avg(sExpEps),
+      expectedRevGrowthYoy: avg(sExpRev),
+      blendedEpsGrowthYoy: avg(sBlndEps),
+      blendedRevGrowthYoy: avg(sBlndRev),
     });
   }
   bySector.sort((a, b) => a.sector.localeCompare(b.sector));
@@ -188,6 +261,9 @@ export async function computeScorecard(quarter = 'Q1 2026'): Promise<ScorecardDa
     const rGuidanceR = rReported.filter(e => e.guidance_direction === 'raised').length;
     const rGuidanceL = rReported.filter(e => e.guidance_direction === 'lowered').length;
 
+    const { expectedEpsGrowths: rExpEps, expectedRevGrowths: rExpRev,
+            blendedEpsGrowths: rBlndEps, blendedRevGrowths: rBlndRev } = computeExpectedBlended(entries);
+
     byRegion.push({
       region,
       totalCompanies: entries.length,
@@ -199,6 +275,10 @@ export async function computeScorecard(quarter = 'Q1 2026'): Promise<ScorecardDa
       avgStockReaction: avg(rReaction),
       pctGuidanceRaised: rReported.length > 0 ? (rGuidanceR / rReported.length) * 100 : 0,
       pctGuidanceLowered: rReported.length > 0 ? (rGuidanceL / rReported.length) * 100 : 0,
+      expectedEpsGrowthYoy: avg(rExpEps),
+      expectedRevGrowthYoy: avg(rExpRev),
+      blendedEpsGrowthYoy: avg(rBlndEps),
+      blendedRevGrowthYoy: avg(rBlndRev),
     });
   }
 
@@ -227,6 +307,12 @@ export async function computeScorecard(quarter = 'Q1 2026'): Promise<ScorecardDa
     avgGrossMargin: avg(grossMargins),
     avgOperatingMargin: avg(opMargins),
     forwardEpsRevisionPct: avg(fwdRevisions),
+    expectedEpsGrowthYoy: avg(expectedEpsGrowths),
+    expectedRevGrowthYoy: avg(expectedRevGrowths),
+    expectedCompaniesIncluded: expectedEpsGrowths.length,
+    blendedEpsGrowthYoy: avg(blendedEpsGrowths),
+    blendedRevGrowthYoy: avg(blendedRevGrowths),
+    blendedCompaniesIncluded: blendedEpsGrowths.length,
     bySector,
     byRegion,
   };

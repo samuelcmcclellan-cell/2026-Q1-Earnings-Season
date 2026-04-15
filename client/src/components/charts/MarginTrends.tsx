@@ -10,7 +10,10 @@ export function MarginTrends() {
     .map(s => ({
       sector: s.sector.replace('Consumer ', 'Cons. ').replace('Communication ', 'Comm. '),
       current: parseFloat(s.avgGrossMargin.toFixed(1)),
-      prior: parseFloat((s.avgGrossMargin - (Math.random() * 2 - 1)).toFixed(1)), // will use real prior data when available
+      // Use real prior margin from seed data (populated after backfill); omit if unavailable
+      prior: (s as any).avgGrossMarginPrior != null && (s as any).avgGrossMarginPrior > 0
+        ? parseFloat(((s as any).avgGrossMarginPrior as number).toFixed(1))
+        : null,
     }))
     .sort((a, b) => b.current - a.current);
 

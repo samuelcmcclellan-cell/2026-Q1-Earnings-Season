@@ -26,6 +26,29 @@ function avgArr(a: number[]): number {
   return a.length ? a.reduce((s, v) => s + v, 0) / a.length : 0;
 }
 
+function growthVsPrior(current: number | null, prior: number | null): number | null {
+  if (current == null || prior == null || prior === 0) return null;
+  return ((current - prior) / Math.abs(prior)) * 100;
+}
+
+function computeExpectedBlended(entries: any[]) {
+  const expectedEps: number[] = [], expectedRev: number[] = [];
+  const blendedEps: number[] = [], blendedRev: number[] = [];
+  for (const e of entries) {
+    const expEg = growthVsPrior(e.eps_estimate, e.eps_actual_prior_year);
+    if (expEg !== null) expectedEps.push(expEg);
+    const expRg = growthVsPrior(e.revenue_estimate, e.revenue_actual_prior_year);
+    if (expRg !== null) expectedRev.push(expRg);
+    const bEps = e.status === 'reported' ? (e.eps_actual ?? e.eps_estimate) : e.eps_estimate;
+    const bRev = e.status === 'reported' ? (e.revenue_actual ?? e.revenue_estimate) : e.revenue_estimate;
+    const bEg = growthVsPrior(bEps, e.eps_actual_prior_year);
+    if (bEg !== null) blendedEps.push(bEg);
+    const bRg = growthVsPrior(bRev, e.revenue_actual_prior_year);
+    if (bRg !== null) blendedRev.push(bRg);
+  }
+  return { expectedEps, expectedRev, blendedEps, blendedRev };
+}
+
 async function getApp() {
   if (app) return app;
 
@@ -177,6 +200,7 @@ async function getApp() {
     }
     const sectorMap = new Map<string, any[]>();
     for (const e of all) { const l = sectorMap.get(e.sector) || []; l.push(e); sectorMap.set(e.sector, l); }
+    const { expectedEps: allExpEps, expectedRev: allExpRev, blendedEps: allBlndEps, blendedRev: allBlndRev } = computeExpectedBlended(all);
     const bySector = Array.from(sectorMap.entries()).map(([sector, entries]) => {
       const sr = entries.filter((e: any) => e.status === 'reported');
       const sEB = sr.filter((e: any) => e.eps_surprise_pct != null && e.eps_surprise_pct > 0.5).length;
@@ -189,6 +213,7 @@ async function getApp() {
       const sGL = sr.filter((e: any) => e.guidance_direction === 'lowered').length;
       const sFwd = sr.filter((e: any) => e.forward_eps_current != null && e.forward_eps_30d_ago != null && e.forward_eps_30d_ago !== 0)
         .map((e: any) => ((e.forward_eps_current - e.forward_eps_30d_ago) / Math.abs(e.forward_eps_30d_ago)) * 100);
+      const { expectedEps: sExpEps, expectedRev: sExpRev, blendedEps: sBlndEps, blendedRev: sBlndRev } = computeExpectedBlended(entries);
       return {
         sector, totalCompanies: entries.length, reportedCompanies: sr.length,
         pctBeatingEps: sr.length ? (sEB / sr.length) * 100 : 0,
@@ -200,12 +225,15 @@ async function getApp() {
         pctGuidanceRaised: sr.length ? (sGR / sr.length) * 100 : 0,
         pctGuidanceLowered: sr.length ? (sGL / sr.length) * 100 : 0,
         forwardEpsRevisionPct: avgArr(sFwd),
+        expectedEpsGrowthYoy: avgArr(sExpEps), expectedRevGrowthYoy: avgArr(sExpRev),
+        blendedEpsGrowthYoy: avgArr(sBlndEps), blendedRevGrowthYoy: avgArr(sBlndRev),
       };
     }).sort((a, b) => a.sector.localeCompare(b.sector));
     const regionMap = new Map<string, any[]>();
     for (const e of all) { const l = regionMap.get(e.region) || []; l.push(e); regionMap.set(e.region, l); }
     const byRegion = Array.from(regionMap.entries()).map(([region, entries]) => {
       const rr = entries.filter((e: any) => e.status === 'reported');
+      const { expectedEps: rExpEps, expectedRev: rExpRev, blendedEps: rBlndEps, blendedRev: rBlndRev } = computeExpectedBlended(entries);
       return {
         region, totalCompanies: entries.length, reportedCompanies: rr.length,
         pctBeatingEps: rr.length ? (rr.filter((e: any) => e.eps_surprise_pct != null && e.eps_surprise_pct > 0.5).length / rr.length) * 100 : 0,
@@ -215,6 +243,8 @@ async function getApp() {
         avgStockReaction: avgArr(rr.filter((e: any) => e.stock_reaction_pct != null).map((e: any) => e.stock_reaction_pct)),
         pctGuidanceRaised: rr.length ? (rr.filter((e: any) => e.guidance_direction === 'raised').length / rr.length) * 100 : 0,
         pctGuidanceLowered: rr.length ? (rr.filter((e: any) => e.guidance_direction === 'lowered').length / rr.length) * 100 : 0,
+        expectedEpsGrowthYoy: avgArr(rExpEps), expectedRevGrowthYoy: avgArr(rExpRev),
+        blendedEpsGrowthYoy: avgArr(rBlndEps), blendedRevGrowthYoy: avgArr(rBlndRev),
       };
     });
     res.json({
@@ -232,6 +262,10 @@ async function getApp() {
       avgEpsGrowthYoy: avgArr(epsGrowthYoy), avgRevenueGrowthYoy: avgArr(revGrowthYoy),
       avgGrossMargin: avgArr(grossMargins), avgOperatingMargin: avgArr(opMargins),
       forwardEpsRevisionPct: avgArr(fwdRevisions),
+      expectedEpsGrowthYoy: avgArr(allExpEps), expectedRevGrowthYoy: avgArr(allExpRev),
+      expectedCompaniesIncluded: allExpEps.length,
+      blendedEpsGrowthYoy: avgArr(allBlndEps), blendedRevGrowthYoy: avgArr(allBlndRev),
+      blendedCompaniesIncluded: allBlndEps.length,
       bySector, byRegion,
     });
   });

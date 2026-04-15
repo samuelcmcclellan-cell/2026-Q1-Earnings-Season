@@ -26,6 +26,14 @@ export interface ScorecardData {
   avgGrossMargin: number;
   avgOperatingMargin: number;
   forwardEpsRevisionPct: number;
+  // Expected: estimates for ALL companies vs prior-year actuals (pre-season benchmark)
+  expectedEpsGrowthYoy: number;
+  expectedRevGrowthYoy: number;
+  expectedCompaniesIncluded: number;
+  // Blended: actuals for reported + estimates for upcoming (running season aggregate)
+  blendedEpsGrowthYoy: number;
+  blendedRevGrowthYoy: number;
+  blendedCompaniesIncluded: number;
   bySector: SectorScorecard[];
   byRegion: RegionScorecard[];
 }
@@ -45,6 +53,10 @@ export interface SectorScorecard {
   pctGuidanceRaised: number;
   pctGuidanceLowered: number;
   forwardEpsRevisionPct: number;
+  expectedEpsGrowthYoy: number;
+  expectedRevGrowthYoy: number;
+  blendedEpsGrowthYoy: number;
+  blendedRevGrowthYoy: number;
 }
 
 export interface RegionScorecard {
@@ -58,6 +70,10 @@ export interface RegionScorecard {
   avgStockReaction: number;
   pctGuidanceRaised: number;
   pctGuidanceLowered: number;
+  expectedEpsGrowthYoy: number;
+  expectedRevGrowthYoy: number;
+  blendedEpsGrowthYoy: number;
+  blendedRevGrowthYoy: number;
 }
 
 export function useScorecard(quarter = 'Q1 2026') {

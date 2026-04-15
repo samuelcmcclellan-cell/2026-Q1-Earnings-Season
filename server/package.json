@@ -7,6 +7,7 @@
     "build": "tsc",
     "seed": "node --experimental-transform-types src/scripts/seed-db.ts",
     "ingest": "node --experimental-transform-types src/scripts/ingest.ts",
+    "backfill": "node --experimental-transform-types src/scripts/backfill-prior-year.ts",
     "migrate": "node --experimental-transform-types src/db/migrate.ts"
   },
   "dependencies": {

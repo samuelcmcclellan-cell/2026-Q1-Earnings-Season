@@ -9,7 +9,11 @@ export function SectorSummary() {
 
   if (isLoading || !data) return <Spinner size="sm" />;
 
+  // Show ALL sectors (not just reported) — sorted by total companies
   const sectors = data.bySector.filter(s => s.totalCompanies > 0).sort((a, b) => b.totalCompanies - a.totalCompanies);
+
+  // Determine which columns to show based on data availability
+  const hasBlended = sectors.some(s => s.blendedEpsGrowthYoy !== 0);
 
   return (
     <div className="bg-bg-card border border-border rounded-lg">
@@ -23,55 +27,71 @@ export function SectorSummary() {
             <tr className="border-b border-border">
               <th className="text-left py-1.5 px-3 text-text-muted font-medium">Sector</th>
               <th className="text-right py-1.5 px-2 text-text-muted font-medium">Rptd</th>
-              <th className="text-right py-1.5 px-2 text-text-muted font-medium">EPS YoY</th>
-              <th className="text-right py-1.5 px-2 text-text-muted font-medium">Rev YoY</th>
+              {hasBlended && (
+                <th className="text-right py-1.5 px-2 text-text-muted font-medium" title="Actuals for reported + estimates for upcoming">
+                  Blended
+                </th>
+              )}
+              <th className="text-right py-1.5 px-2 text-text-muted font-medium" title="Consensus estimates vs prior-year for all companies">
+                Expected
+              </th>
               <th className="text-right py-1.5 px-2 text-text-muted font-medium">Beat%</th>
               <th className="text-right py-1.5 px-2 text-text-muted font-medium">Margin</th>
               <th className="text-right py-1.5 px-3 text-text-muted font-medium">Rxn</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-border">
-            {sectors.map((s, i) => (
-              <tr key={s.sector} className={`hover:bg-bg-hover transition-colors ${i % 2 === 1 ? 'bg-bg-card' : 'bg-bg-secondary/20'}`}>
-                <td className="py-1.5 px-3">
-                  <Link to={`/sectors/${encodeURIComponent(s.sector)}`} className="flex items-center gap-1.5 hover:text-accent-blue">
-                    <span
-                      className="w-1.5 h-1.5 rounded-full shrink-0"
-                      style={{ backgroundColor: SECTOR_COLORS[s.sector] || '#666' }}
-                    />
-                    <span className="text-text-primary font-medium text-xs">{s.sector}</span>
-                  </Link>
-                </td>
-                <td className="text-right py-1.5 px-2 font-mono text-text-secondary">
-                  {s.reportedCompanies}/{s.totalCompanies}
-                </td>
-                <td className="text-right py-1.5 px-2 font-mono">
-                  {s.reportedCompanies > 0 ? (
-                    <span className={numColor(s.avgEpsGrowthYoy)}>{formatPct(s.avgEpsGrowthYoy)}</span>
-                  ) : <span className="text-text-muted">--</span>}
-                </td>
-                <td className="text-right py-1.5 px-2 font-mono">
-                  {s.reportedCompanies > 0 ? (
-                    <span className={numColor(s.avgRevenueGrowthYoy)}>{formatPct(s.avgRevenueGrowthYoy)}</span>
-                  ) : <span className="text-text-muted">--</span>}
-                </td>
-                <td className="text-right py-1.5 px-2 font-mono">
-                  {s.reportedCompanies > 0 ? (
-                    <span className={numColor(s.pctBeatingEps - 50)}>{formatPct(s.pctBeatingEps, 0)}</span>
-                  ) : <span className="text-text-muted">--</span>}
-                </td>
-                <td className="text-right py-1.5 px-2 font-mono">
-                  {s.avgGrossMargin > 0 ? (
-                    <span className="text-text-secondary">{s.avgGrossMargin.toFixed(1)}%</span>
-                  ) : <span className="text-text-muted">--</span>}
-                </td>
-                <td className="text-right py-1.5 px-3 font-mono">
-                  {s.reportedCompanies > 0 ? (
-                    <span className={numColor(s.avgStockReaction)}>{formatPct(s.avgStockReaction)}</span>
-                  ) : <span className="text-text-muted">--</span>}
-                </td>
-              </tr>
-            ))}
+            {sectors.map((s, i) => {
+              const isEstimateOnly = s.reportedCompanies === 0;
+              return (
+                <tr
+                  key={s.sector}
+                  className={`hover:bg-bg-hover transition-colors ${i % 2 === 1 ? 'bg-bg-card' : 'bg-bg-secondary/20'} ${isEstimateOnly ? 'opacity-70' : ''}`}
+                >
+                  <td className="py-1.5 px-3">
+                    <Link to={`/sectors/${encodeURIComponent(s.sector)}`} className="flex items-center gap-1.5 hover:text-accent-blue">
+                      <span
+                        className="w-1.5 h-1.5 rounded-full shrink-0"
+                        style={{ backgroundColor: SECTOR_COLORS[s.sector] || '#666' }}
+                      />
+                      <span className={`font-medium text-xs ${isEstimateOnly ? 'text-text-secondary' : 'text-text-primary'}`}>
+                        {s.sector}
+                      </span>
+                    </Link>
+                  </td>
+                  <td className="text-right py-1.5 px-2 font-mono text-text-secondary">
+                    {s.reportedCompanies}/{s.totalCompanies}
+                  </td>
+                  {hasBlended && (
+                    <td className="text-right py-1.5 px-2 font-mono">
+                      {s.blendedEpsGrowthYoy !== 0 ? (
+                        <span className={numColor(s.blendedEpsGrowthYoy)}>{formatPct(s.blendedEpsGrowthYoy)}</span>
+                      ) : <span className="text-text-muted">--</span>}
+                    </td>
+                  )}
+                  <td className="text-right py-1.5 px-2 font-mono">
+                    {s.expectedEpsGrowthYoy !== 0 ? (
+                      <span className={`${numColor(s.expectedEpsGrowthYoy)} opacity-75`}>{formatPct(s.expectedEpsGrowthYoy)}</span>
+                    ) : <span className="text-text-muted">--</span>}
+                  </td>
+                  <td className="text-right py-1.5 px-2 font-mono">
+                    {s.reportedCompanies > 0 ? (
+                      <span className={numColor(s.pctBeatingEps - 50)}>{formatPct(s.pctBeatingEps, 0)}</span>
+                    ) : <span className="text-text-muted">--</span>}
+                  </td>
+                  <td className="text-right py-1.5 px-2 font-mono">
+                    {s.avgGrossMargin > 0 ? (
+                      <span className="text-text-secondary">{s.avgGrossMargin.toFixed(1)}%</span>
+                    ) : <span className="text-text-muted">--</span>}
+                  </td>
+                  <td className="text-right py-1.5 px-3 font-mono">
+                    {s.reportedCompanies > 0 ? (
+                      <span className={numColor(s.avgStockReaction)}>{formatPct(s.avgStockReaction)}</span>
+                    ) : <span className="text-text-muted">--</span>}
+                  </td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>
