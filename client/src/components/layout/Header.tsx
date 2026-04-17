@@ -31,6 +31,16 @@ export function Header() {
               <h2 className="text-[13px] font-semibold text-text-primary">Q1 2026 Earnings Season</h2>
               <p className="text-[10px] text-text-muted font-mono">
                 {new Date().toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' })}
+                {data?.lastRefreshedAt && (
+                  <>
+                    <span className="mx-1.5 text-text-muted/60">·</span>
+                    <span title={new Date(data.lastRefreshedAt + 'Z').toISOString()}>
+                      Data as of {new Date(data.lastRefreshedAt + 'Z').toLocaleString('en-US', {
+                        month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit',
+                      })}
+                    </span>
+                  </>
+                )}
               </p>
             </div>
             {/* Season progress — prominent */}

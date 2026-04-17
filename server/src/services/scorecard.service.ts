@@ -34,6 +34,8 @@ export interface ScorecardData {
   blendedEpsGrowthYoy: number;
   blendedRevGrowthYoy: number;
   blendedCompaniesIncluded: number;
+  // ISO timestamp (UTC) of the most recent reported-record update; null if nothing reported yet.
+  lastRefreshedAt: string | null;
   bySector: SectorScorecard[];
   byRegion: RegionScorecard[];
 }
@@ -313,7 +315,17 @@ export async function computeScorecard(quarter = 'Q1 2026'): Promise<ScorecardDa
     blendedEpsGrowthYoy: avg(blendedEpsGrowths),
     blendedRevGrowthYoy: avg(blendedRevGrowths),
     blendedCompaniesIncluded: blendedEpsGrowths.length,
+    lastRefreshedAt: computeLastRefreshedAt(reported),
     bySector,
     byRegion,
   };
+}
+
+function computeLastRefreshedAt(reported: any[]): string | null {
+  let max: string | null = null;
+  for (const r of reported) {
+    const ts = r.updated_at ?? r.last_refreshed_at ?? null;
+    if (ts && (max === null || ts > max)) max = ts;
+  }
+  return max;
 }

@@ -34,6 +34,8 @@ export interface ScorecardData {
   blendedEpsGrowthYoy: number;
   blendedRevGrowthYoy: number;
   blendedCompaniesIncluded: number;
+  // ISO timestamp (UTC) of the most recent reported-record update; null if nothing reported yet.
+  lastRefreshedAt: string | null;
   bySector: SectorScorecard[];
   byRegion: RegionScorecard[];
 }

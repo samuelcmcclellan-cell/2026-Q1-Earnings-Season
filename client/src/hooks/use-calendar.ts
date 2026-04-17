@@ -2,11 +2,9 @@ import { useQuery } from '@tanstack/react-query';
 import { apiFetch } from '../lib/api';
 import type { EarningsEntry } from './use-earnings';
 
-interface CalendarResponse {
-  from: string;
-  to: string;
-  entries: EarningsEntry[];
-}
+// The /api/calendar endpoint currently returns a bare array; older code paths
+// may return an object wrapper. Accept both shapes — consumers normalize.
+export type CalendarResponse = EarningsEntry[] | { from?: string; to?: string; entries: EarningsEntry[] };
 
 export function useCalendar(from?: string, to?: string) {
   const params = new URLSearchParams();

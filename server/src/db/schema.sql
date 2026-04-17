@@ -45,6 +45,7 @@ CREATE TABLE IF NOT EXISTS earnings_reports (
   forward_revenue_current REAL,
   forward_revenue_30d_ago REAL,
   data_source TEXT DEFAULT 'seed',
+  last_refreshed_at TEXT NOT NULL DEFAULT (datetime('now')),
   created_at TEXT NOT NULL DEFAULT (datetime('now')),
   updated_at TEXT NOT NULL DEFAULT (datetime('now')),
   UNIQUE(company_id, fiscal_quarter)

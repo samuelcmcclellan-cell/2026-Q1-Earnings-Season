@@ -120,7 +120,17 @@ export function EarningsTable({ data, compact, showLive }: EarningsTableProps) {
         size: 60,
         cell: ({ getValue, row }) => {
           const v = getValue() as number | null;
-          if (v === null) return <span className="text-text-muted text-[11px]">--</span>;
+          if (v === null) {
+            const isFinancial = row.original.sector === 'Financials';
+            return (
+              <span
+                className="text-text-muted text-[11px]"
+                title={isFinancial ? 'Not applicable for financial-sector companies' : 'No data'}
+              >
+                —
+              </span>
+            );
+          }
           return (
             <span className={cn('font-mono text-[11px] text-text-secondary', row.original.data_source === 'seed' && 'data-seed')} title={row.original.data_source === 'seed' ? 'Estimated data' : undefined}>
               {v.toFixed(1)}%

@@ -248,38 +248,6 @@
     "source": "Q1 2026 Earnings Call"
   },
   {
-    "ticker": "SSNLF",
-    "fiscal_quarter": "Q1 2026",
-    "quote_text": "Our HBM3E shipments ramped aggressively in Q1, and we have secured substantial supply agreements with leading AI chip designers extending through 2027. High-bandwidth memory now represents our fastest-growing product line and carries accretive margins relative to our legacy DRAM portfolio.",
-    "theme_tags": "[\"ai_capex\", \"pricing_power\", \"margin_trend\"]",
-    "sentiment": "positive",
-    "source": "Q1 2026 Earnings Call"
-  },
-  {
-    "ticker": "SSNLF",
-    "fiscal_quarter": "Q1 2026",
-    "quote_text": "The smartphone market is recovering more gradually than we initially anticipated, with replacement cycles still extended in developed markets. However, we are seeing improving sell-through in emerging markets and expect the launch of our next flagship series to catalyze an upgrade cycle in the second half.",
-    "theme_tags": "[\"consumer_health\", \"guidance\", \"competitive_dynamics\"]",
-    "sentiment": "neutral",
-    "source": "Q1 2026 Earnings Call"
-  },
-  {
-    "ticker": "SSNLF",
-    "fiscal_quarter": "Q1 2026",
-    "quote_text": "Consolidated operating margins expanded three hundred basis points year-over-year as the memory upcycle gained momentum and our foundry business reduced underutilization charges. We are targeting mid-teens operating margins for the full year, which would represent a significant recovery from the trough.",
-    "theme_tags": "[\"margin_trend\", \"guidance\", \"capital_allocation\"]",
-    "sentiment": "positive",
-    "source": "Q1 2026 Earnings Call"
-  },
-  {
-    "ticker": "SSNLF",
-    "fiscal_quarter": "Q1 2026",
-    "quote_text": "Our foundry services division is ramping gate-all-around technology at the two-nanometer node, with initial production yields tracking ahead of plan. We have line-of-sight to multiple design wins that should contribute meaningful revenue beginning in 2027, helping narrow the gap with the market leader.",
-    "theme_tags": "[\"competitive_dynamics\", \"ai_capex\", \"guidance\"]",
-    "sentiment": "positive",
-    "source": "Q1 2026 Earnings Call"
-  },
-  {
     "ticker": "BLK",
     "fiscal_quarter": "Q1 2026",
     "quote_text": "We generated over one hundred billion dollars of total net inflows in Q1, led by iShares ETF flows that benefited from continued rotation into fixed income and a broadening of equity allocations beyond US mega-cap technology. Our market share in ETFs reached thirty-four percent globally.",

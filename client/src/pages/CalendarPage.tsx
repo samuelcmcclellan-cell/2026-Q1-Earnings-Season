@@ -27,6 +27,13 @@ export function CalendarPage() {
   const { data, isLoading } = useCalendar(fromStr, toStr);
 
   const days = useMemo(() => {
+    // /api/calendar may return either a bare array or an object { entries: [...] }.
+    // Defensively normalize to an array before filtering to avoid runtime crashes.
+    const allEntries: any[] = Array.isArray(data)
+      ? data
+      : Array.isArray((data as any)?.entries)
+        ? (data as any).entries
+        : [];
     const result: { date: string; label: string; entries: any[] }[] = [];
     for (let i = 0; i < 5; i++) {
       const d = addDays(monday, i);
@@ -34,7 +41,7 @@ export function CalendarPage() {
       result.push({
         date: dateStr,
         label: format(d, 'EEE, MMM d'),
-        entries: (data?.entries || []).filter(e => e.report_date === dateStr),
+        entries: allEntries.filter((e) => e.report_date === dateStr),
       });
     }
     return result;

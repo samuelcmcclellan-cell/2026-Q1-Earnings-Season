@@ -10,7 +10,8 @@
     "build": "npm run build -w server && npm run build -w client",
     "seed": "npm run seed -w server",
     "ingest": "node --experimental-transform-types scripts/ingest-csv.ts",
-    "refresh": "node --experimental-transform-types scripts/refresh-data.ts"
+    "refresh": "node --experimental-transform-types scripts/refresh-data.ts",
+    "validate-seed": "node scripts/validate-seed.mjs"
   },
   "devDependencies": {
     "concurrently": "^9.2.1",

@@ -247,6 +247,14 @@ async function getApp() {
         blendedEpsGrowthYoy: avgArr(rBlndEps), blendedRevGrowthYoy: avgArr(rBlndRev),
       };
     });
+    // Most recent updated_at across reported records — used as the "data freshness" timestamp.
+    const freshnessRow = queryOne(
+      `SELECT MAX(updated_at) AS last_refreshed_at FROM earnings_reports
+       WHERE fiscal_quarter = ? AND status = 'reported'`,
+      [quarter]
+    );
+    const lastRefreshedAt: string | null = freshnessRow?.last_refreshed_at ?? null;
+
     res.json({
       quarter, totalCompanies: all.length, totalReported: reported.length,
       pctReported: all.length ? (reported.length / all.length) * 100 : 0,
@@ -266,6 +274,7 @@ async function getApp() {
       expectedCompaniesIncluded: allExpEps.length,
       blendedEpsGrowthYoy: avgArr(allBlndEps), blendedRevGrowthYoy: avgArr(allBlndRev),
       blendedCompaniesIncluded: allBlndEps.length,
+      lastRefreshedAt,
       bySector, byRegion,
     });
   });

@@ -6,7 +6,8 @@ export function MarginTrends() {
   if (!data) return null;
 
   const chartData = data.bySector
-    .filter(s => s.reportedCompanies > 0 && s.avgGrossMargin > 0)
+    // Financials don't report a comparable gross margin; exclude them from this chart.
+    .filter(s => s.sector !== 'Financials' && s.reportedCompanies > 0 && s.avgGrossMargin > 0)
     .map(s => ({
       sector: s.sector.replace('Consumer ', 'Cons. ').replace('Communication ', 'Comm. '),
       current: parseFloat(s.avgGrossMargin.toFixed(1)),
@@ -20,7 +21,8 @@ export function MarginTrends() {
   if (chartData.length === 0) {
     return (
       <div className="bg-bg-card border border-border rounded-lg p-3">
-        <h3 className="text-[11px] font-medium text-text-muted uppercase tracking-wider mb-2">Gross Margin by Sector</h3>
+        <h3 className="text-[11px] font-medium text-text-muted uppercase tracking-wider mb-1">Gross Margin by Sector</h3>
+        <p className="text-[10px] text-text-muted mb-2">Excludes Financials (gross margin not applicable)</p>
         <p className="text-[11px] text-text-muted text-center py-8">No margin data available yet</p>
       </div>
     );
@@ -28,7 +30,8 @@ export function MarginTrends() {
 
   return (
     <div className="bg-bg-card border border-border rounded-lg p-3">
-      <h3 className="text-[11px] font-medium text-text-muted uppercase tracking-wider mb-2">Gross Margin by Sector</h3>
+      <h3 className="text-[11px] font-medium text-text-muted uppercase tracking-wider mb-1">Gross Margin by Sector</h3>
+      <p className="text-[10px] text-text-muted mb-2">Excludes Financials (gross margin not applicable)</p>
       <ResponsiveContainer width="100%" height={Math.max(160, chartData.length * 28)}>
         <BarChart data={chartData} layout="vertical" margin={{ left: 80, right: 20, top: 0, bottom: 0 }}>
           <XAxis
