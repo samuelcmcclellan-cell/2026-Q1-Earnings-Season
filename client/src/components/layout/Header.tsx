@@ -1,4 +1,5 @@
 import { useScorecard } from '../../hooks/use-scorecard';
+import { useCanonicalMeta } from '../../hooks/use-canonical';
 import { formatPct } from '../../lib/utils';
 import { CommandPalette } from '../ui/CommandPalette';
 import { useState, useEffect } from 'react';
@@ -6,6 +7,7 @@ import { Search } from 'lucide-react';
 
 export function Header() {
   const { data } = useScorecard();
+  const { data: meta } = useCanonicalMeta();
   const reported = data?.totalReported ?? 0;
   const total = data?.totalCompanies ?? 0;
   const pct = total > 0 ? ((reported / total) * 100).toFixed(0) : '0';
@@ -38,6 +40,14 @@ export function Header() {
                       Data as of {new Date(data.lastRefreshedAt + 'Z').toLocaleString('en-US', {
                         month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit',
                       })}
+                    </span>
+                  </>
+                )}
+                {meta && (
+                  <>
+                    <span className="mx-1.5 text-text-muted/60">·</span>
+                    <span title={`${meta.source_file} · sha256=${meta.source_sha256 ? meta.source_sha256.slice(0, 12) + '…' : 'n/a'}`}>
+                      FactSet Earnings Insight ({meta.tier1_figure_count} T1 figures, {meta.report_date})
                     </span>
                   </>
                 )}
