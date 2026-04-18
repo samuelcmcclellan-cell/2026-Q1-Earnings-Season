@@ -11,6 +11,12 @@ import { RegionDetailPage } from './pages/RegionDetailPage';
 import { SegmentsPage } from './pages/SegmentsPage';
 import { ThemesPage } from './pages/ThemesPage';
 import { AiInsightsPage } from './pages/AiInsightsPage';
+import { TopicOfTheWeekPage } from './pages/TopicOfTheWeekPage';
+import { ForwardOutlookPage } from './pages/ForwardOutlookPage';
+import { BottomUpEpsPage } from './pages/BottomUpEpsPage';
+import { GeographicPage } from './pages/GeographicPage';
+import { SurprisesPage } from './pages/SurprisesPage';
+import { RatingsPage } from './pages/RatingsPage';
 
 export default function App() {
   return (
@@ -27,6 +33,12 @@ export default function App() {
         <Route path="/segments" element={<SegmentsPage />} />
         <Route path="/themes" element={<ThemesPage />} />
         <Route path="/ai" element={<AiInsightsPage />} />
+        <Route path="/topic-of-the-week" element={<TopicOfTheWeekPage />} />
+        <Route path="/forward-outlook" element={<ForwardOutlookPage />} />
+        <Route path="/bottom-up-eps" element={<BottomUpEpsPage />} />
+        <Route path="/geographic" element={<GeographicPage />} />
+        <Route path="/surprises" element={<SurprisesPage />} />
+        <Route path="/ratings" element={<RatingsPage />} />
       </Routes>
     </Shell>
   );

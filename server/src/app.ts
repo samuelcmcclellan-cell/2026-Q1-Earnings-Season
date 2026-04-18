@@ -11,6 +11,7 @@ import aiRoutes from './routes/ai.routes.ts';
 import regionsRoutes from './routes/regions.routes.ts';
 import segmentsRoutes from './routes/segments.routes.ts';
 import marketRoutes from './routes/market.routes.ts';
+import canonicalRoutes from './routes/canonical.routes.ts';
 import { errorHandler } from './middleware/error-handler.ts';
 
 export function createApp() {
@@ -31,6 +32,7 @@ export function createApp() {
   app.use('/api/regions', regionsRoutes);
   app.use('/api/segments', segmentsRoutes);
   app.use('/api/market', marketRoutes);
+  app.use('/api/canonical', canonicalRoutes);
 
   // Health check
   app.get('/api/health', (_req, res) => {

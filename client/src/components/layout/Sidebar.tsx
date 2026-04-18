@@ -1,15 +1,21 @@
 import { NavLink } from 'react-router-dom';
-import { LayoutDashboard, Calendar, TrendingUp, PieChart, MessageSquareQuote, Brain, Globe, Layers, Menu, X } from 'lucide-react';
+import { LayoutDashboard, Calendar, TrendingUp, PieChart, MessageSquareQuote, Brain, Globe, Layers, Menu, X, Lightbulb, LineChart, BarChart3, Zap, Target } from 'lucide-react';
 import { cn } from '../../lib/utils';
 import { useUIStore } from '../../stores/ui.store';
 
 const navItems = [
   { path: '/', label: 'Dashboard', icon: LayoutDashboard },
-  { path: '/calendar', label: 'Calendar', icon: Calendar },
-  { path: '/earnings', label: 'Earnings', icon: TrendingUp },
+  { path: '/topic-of-the-week', label: 'Topic of Week', icon: Lightbulb },
+  { path: '/forward-outlook', label: 'Forward Outlook', icon: LineChart },
+  { path: '/bottom-up-eps', label: 'Bottom-Up EPS', icon: BarChart3 },
+  { path: '/geographic', label: 'Geographic', icon: Globe },
+  { path: '/surprises', label: 'Surprises', icon: Zap },
+  { path: '/ratings', label: 'Ratings', icon: Target },
   { path: '/sectors', label: 'Sectors', icon: PieChart },
   { path: '/regions', label: 'Regions', icon: Globe },
   { path: '/segments', label: 'Segments', icon: Layers },
+  { path: '/earnings', label: 'Earnings', icon: TrendingUp },
+  { path: '/calendar', label: 'Calendar', icon: Calendar },
   { path: '/themes', label: 'Themes', icon: MessageSquareQuote },
   { path: '/ai', label: 'AI Insights', icon: Brain },
 ];

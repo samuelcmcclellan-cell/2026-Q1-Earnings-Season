@@ -414,6 +414,56 @@ async function getApp() {
     res.end();
   });
 
+  // Canonical (FactSet Earnings Insight)
+  const canonicalPath = path.join(process.cwd(), 'server/data/canonical/q1-2026.json');
+  const aggregatesPath = path.join(process.cwd(), 'server/data/seed/index-aggregates-q1-2026.json');
+  let canonicalCache: any = null;
+  let aggregatesCache: any = null;
+  const loadCanonical = () => {
+    if (!canonicalCache && fs.existsSync(canonicalPath)) {
+      canonicalCache = JSON.parse(fs.readFileSync(canonicalPath, 'utf-8'));
+    }
+    return canonicalCache;
+  };
+  const loadAggregates = () => {
+    if (!aggregatesCache && fs.existsSync(aggregatesPath)) {
+      aggregatesCache = JSON.parse(fs.readFileSync(aggregatesPath, 'utf-8'));
+    }
+    return aggregatesCache;
+  };
+  app.get('/api/canonical', (_req, res) => res.json(loadCanonical() ?? {}));
+  app.get('/api/canonical/aggregates', (_req, res) => res.json(loadAggregates() ?? {}));
+  app.get('/api/canonical/scorecard', (_req, res) => res.json(loadCanonical()?.scorecard ?? {}));
+  app.get('/api/canonical/topic-of-the-week', (_req, res) => {
+    const c = loadCanonical();
+    res.json(c ? { topic: c.topic_of_the_week, contributors: c.top_contributors } : {});
+  });
+  app.get('/api/canonical/forward-outlook', (_req, res) => res.json(loadCanonical()?.forward_estimates ?? {}));
+  app.get('/api/canonical/bottom-up-eps', (_req, res) => res.json(loadCanonical()?.bottom_up_eps ?? {}));
+  app.get('/api/canonical/geographic', (_req, res) => res.json(loadCanonical()?.geographic ?? {}));
+  app.get('/api/canonical/surprises', (_req, res) => res.json(loadCanonical()?.top_surprises ?? {}));
+  app.get('/api/canonical/ratings', (_req, res) => res.json(loadCanonical()?.targets_ratings ?? {}));
+  app.get('/api/canonical/guidance', (_req, res) => res.json(loadCanonical()?.guidance_counts ?? {}));
+  app.get('/api/canonical/sector-metrics', (_req, res) => res.json(loadCanonical()?.sector_metrics ?? []));
+  app.get('/api/canonical/valuation', (_req, res) => res.json(loadCanonical()?.valuation ?? {}));
+  app.get('/api/canonical/margin', (_req, res) => res.json(loadCanonical()?.margin ?? {}));
+  app.get('/api/canonical/meta', (_req, res) => {
+    const c = loadCanonical();
+    if (!c) return res.json({});
+    let tier1Count = 0;
+    const walk = (v: any) => {
+      if (!v || typeof v !== 'object') return;
+      if ('source_tier' in v && v.source_tier === 'tier_1_factset_insight') tier1Count++;
+      for (const k of Object.keys(v)) walk(v[k]);
+    };
+    walk(c);
+    res.json({
+      report_date: c.report_date, quarter: c.quarter,
+      source_file: c.source_file, source_sha256: c.source_sha256,
+      tier1_figure_count: tier1Count,
+    });
+  });
+
   return app;
 }
 
