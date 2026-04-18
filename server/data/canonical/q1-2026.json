@@ -1,0 +1,515 @@
+{
+  "report_date": "2026-04-17",
+  "quarter": "Q1 2026",
+  "source_file": "EarningsInsight_041726.pdf",
+  "source_sha256": null,
+  "scorecard": {
+    "pct_reporting": { "value": 10, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 5, "as_of": "2026-04-17" },
+    "pct_beat_eps": { "value": 88, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 5, "as_of": "2026-04-17" },
+    "pct_beat_revenue": { "value": 84, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 5, "as_of": "2026-04-17" },
+    "pct_inline_eps": { "value": 4, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 6, "as_of": "2026-04-17" },
+    "pct_miss_eps": { "value": 8, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 6, "as_of": "2026-04-17" },
+    "eps_surprise_pct_aggregate": { "value": 10.8, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 6, "as_of": "2026-04-17" },
+    "revenue_surprise_pct_aggregate": { "value": 2.0, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 7, "as_of": "2026-04-17" },
+    "eps_surprise_pct_5yr_avg": { "value": 7.3, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 6, "as_of": "2026-04-17" },
+    "eps_surprise_pct_10yr_avg": { "value": 7.1, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 6, "as_of": "2026-04-17" },
+    "revenue_surprise_pct_5yr_avg": { "value": 2.0, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 7, "as_of": "2026-04-17" },
+    "revenue_surprise_pct_10yr_avg": { "value": 1.5, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 7, "as_of": "2026-04-17" },
+    "pct_beat_eps_5yr_avg": { "value": 78, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 6, "as_of": "2026-04-17" },
+    "pct_beat_eps_10yr_avg": { "value": 76, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 6, "as_of": "2026-04-17" },
+    "pct_beat_revenue_5yr_avg": { "value": 70, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 7, "as_of": "2026-04-17" },
+    "pct_beat_revenue_10yr_avg": { "value": 67, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 7, "as_of": "2026-04-17" },
+    "avg_price_reaction_positive_surprise": { "value": -0.2, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 7, "as_of": "2026-04-17" },
+    "avg_price_reaction_negative_surprise": { "value": -1.5, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 7, "as_of": "2026-04-17" }
+  },
+  "revisions": {
+    "blended_eps_growth_now": { "value": 13.2, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 5, "as_of": "2026-04-17" },
+    "blended_eps_growth_last_week": { "value": 12.2, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 5, "as_of": "2026-04-10" },
+    "blended_eps_growth_mar31": { "value": 13.2, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 1, "as_of": "2026-03-31" },
+    "blended_revenue_growth_now": { "value": 9.9, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 5, "as_of": "2026-04-17" },
+    "blended_revenue_growth_last_week": { "value": 9.8, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 5, "as_of": "2026-04-10" },
+    "blended_revenue_growth_mar31": { "value": 9.8, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 5, "as_of": "2026-03-31" }
+  },
+  "growth": {
+    "blended_eps_growth_yoy": { "value": 13.2, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 1, "as_of": "2026-04-17" },
+    "blended_revenue_growth_yoy": { "value": 9.9, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 1, "as_of": "2026-04-17" },
+    "consecutive_quarters_double_digit_growth": { "value": 6, "unit": "count", "source_tier": "tier_1_factset_insight", "source_page": 1, "as_of": "2026-04-17" },
+    "earnings_growth_5yr_avg": { "value": 16.4, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 9, "as_of": "2026-04-17" },
+    "earnings_growth_10yr_avg": { "value": 10.3, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 9, "as_of": "2026-04-17" },
+    "revenue_growth_5yr_avg": { "value": 8.7, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 10, "as_of": "2026-04-17" },
+    "revenue_growth_10yr_avg": { "value": 6.3, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 10, "as_of": "2026-04-17" }
+  },
+  "margin": {
+    "net_profit_margin_q1_2026": { "value": 13.2, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 11, "as_of": "2026-04-17" },
+    "net_profit_margin_q4_2025": { "value": 13.2, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 11, "as_of": "2026-04-17" },
+    "net_profit_margin_q1_2025": { "value": 12.8, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 11, "as_of": "2026-04-17" },
+    "net_profit_margin_5yr_avg": { "value": 12.2, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 11, "as_of": "2026-04-17" }
+  },
+  "forward_estimates": {
+    "q2_2026": {
+      "eps_growth_yoy": { "value": 20.1, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 12, "as_of": "2026-04-17" },
+      "revenue_growth_yoy": { "value": 10.3, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 12, "as_of": "2026-04-17" }
+    },
+    "q3_2026": {
+      "eps_growth_yoy": { "value": 22.2, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 12, "as_of": "2026-04-17" },
+      "revenue_growth_yoy": { "value": 9.2, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 12, "as_of": "2026-04-17" }
+    },
+    "q4_2026": {
+      "eps_growth_yoy": { "value": 19.9, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 12, "as_of": "2026-04-17" },
+      "revenue_growth_yoy": { "value": 8.8, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 12, "as_of": "2026-04-17" }
+    },
+    "cy_2026": {
+      "eps_growth_yoy": { "value": 18.0, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 12, "as_of": "2026-04-17" },
+      "revenue_growth_yoy": { "value": 9.2, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 12, "as_of": "2026-04-17" }
+    },
+    "cy_2027": {
+      "eps_growth_yoy": { "value": 16.5, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 12, "as_of": "2026-04-17" },
+      "revenue_growth_yoy": { "value": 7.3, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 12, "as_of": "2026-04-17" }
+    }
+  },
+  "valuation": {
+    "forward_pe_12m": { "value": 20.9, "unit": "ratio", "source_tier": "tier_1_factset_insight", "source_page": 6, "as_of": "2026-04-17" },
+    "forward_pe_12m_5yr_avg": { "value": 19.9, "unit": "ratio", "source_tier": "tier_1_factset_insight", "source_page": 1, "as_of": "2026-04-17" },
+    "forward_pe_12m_10yr_avg": { "value": 18.9, "unit": "ratio", "source_tier": "tier_1_factset_insight", "source_page": 1, "as_of": "2026-04-17" },
+    "forward_pe_12m_mar31": { "value": 19.7, "unit": "ratio", "source_tier": "tier_1_factset_insight", "source_page": 6, "as_of": "2026-03-31" },
+    "trailing_pe_12m": { "value": 27.8, "unit": "ratio", "source_tier": "tier_1_factset_insight", "source_page": 12, "as_of": "2026-04-17" },
+    "trailing_pe_12m_5yr_avg": { "value": 24.7, "unit": "ratio", "source_tier": "tier_1_factset_insight", "source_page": 12, "as_of": "2026-04-17" },
+    "trailing_pe_12m_10yr_avg": { "value": 23.2, "unit": "ratio", "source_tier": "tier_1_factset_insight", "source_page": 12, "as_of": "2026-04-17" },
+    "index_price_change_since_mar31": { "value": 7.6, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 12, "as_of": "2026-04-17" },
+    "forward_eps_change_since_mar31": { "value": 1.5, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 12, "as_of": "2026-04-17" }
+  },
+  "geographic": {
+    "aggregate": {
+      "us_revenue_pct": { "value": 60, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17" },
+      "international_revenue_pct": { "value": 40, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17" }
+    },
+    "by_sector": {
+      "Information Technology": {
+        "us_revenue_pct": { "value": 58, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17", "notes": "chart transcription" },
+        "international_revenue_pct": { "value": 42, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17", "notes": "chart transcription" }
+      },
+      "Materials": {
+        "us_revenue_pct": { "value": 50, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17", "notes": "chart transcription" },
+        "international_revenue_pct": { "value": 50, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17", "notes": "chart transcription" }
+      },
+      "Energy": {
+        "us_revenue_pct": { "value": 56, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17", "notes": "chart transcription" },
+        "international_revenue_pct": { "value": 44, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17", "notes": "chart transcription" }
+      },
+      "Health Care": {
+        "us_revenue_pct": { "value": 62, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17", "notes": "chart transcription" },
+        "international_revenue_pct": { "value": 38, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17", "notes": "chart transcription" }
+      },
+      "Communication Services": {
+        "us_revenue_pct": { "value": 80, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17", "notes": "chart transcription" },
+        "international_revenue_pct": { "value": 20, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17", "notes": "chart transcription" }
+      },
+      "Consumer Discretionary": {
+        "us_revenue_pct": { "value": 67, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17", "notes": "chart transcription" },
+        "international_revenue_pct": { "value": 33, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17", "notes": "chart transcription" }
+      },
+      "Consumer Staples": {
+        "us_revenue_pct": { "value": 67, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17", "notes": "chart transcription" },
+        "international_revenue_pct": { "value": 33, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17", "notes": "chart transcription" }
+      },
+      "Financials": {
+        "us_revenue_pct": { "value": 75, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17", "notes": "chart transcription" },
+        "international_revenue_pct": { "value": 25, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17", "notes": "chart transcription" }
+      },
+      "Industrials": {
+        "us_revenue_pct": { "value": 71, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17", "notes": "chart transcription" },
+        "international_revenue_pct": { "value": 29, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17", "notes": "chart transcription" }
+      },
+      "Real Estate": {
+        "us_revenue_pct": { "value": 85, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17", "notes": "chart transcription" },
+        "international_revenue_pct": { "value": 15, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17", "notes": "chart transcription" }
+      },
+      "Utilities": {
+        "us_revenue_pct": { "value": 99, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17", "notes": "chart transcription" },
+        "international_revenue_pct": { "value": 1, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17", "notes": "chart transcription" }
+      }
+    }
+  },
+  "targets_ratings": {
+    "bottom_up_target_price": { "value": 8325.60, "unit": "usd", "source_tier": "tier_1_factset_insight", "source_page": 12, "as_of": "2026-04-17" },
+    "closing_price": { "value": 7041.28, "unit": "usd", "source_tier": "tier_1_factset_insight", "source_page": 12, "as_of": "2026-04-15" },
+    "upside_vs_closing_pct": { "value": 18.2, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 12, "as_of": "2026-04-17" },
+    "total_ratings_count": { "value": 12896, "unit": "count", "source_tier": "tier_1_factset_insight", "source_page": 13, "as_of": "2026-04-17" },
+    "pct_buy": { "value": 58.5, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 13, "as_of": "2026-04-17" },
+    "pct_hold": { "value": 36.2, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 13, "as_of": "2026-04-17" },
+    "pct_sell": { "value": 5.3, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 13, "as_of": "2026-04-17" },
+    "sector_buy_pct": {
+      "Information Technology": { "value": 68, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 13, "as_of": "2026-04-17" },
+      "Communication Services": { "value": 65, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 13, "as_of": "2026-04-17" },
+      "Health Care": { "value": 63, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 13, "as_of": "2026-04-17" },
+      "Financials": { "value": 57, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17" },
+      "Consumer Discretionary": { "value": 56, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "Energy": { "value": 55, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "Industrials": { "value": 54, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "Materials": { "value": 53, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "Real Estate": { "value": 52, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "Utilities": { "value": 48, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 13, "as_of": "2026-04-17" },
+      "Consumer Staples": { "value": 43, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 13, "as_of": "2026-04-17" }
+    },
+    "sector_upside_pct": {
+      "Information Technology": { "value": 23.4, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 12, "as_of": "2026-04-17" },
+      "Health Care": { "value": 22.8, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 12, "as_of": "2026-04-17" },
+      "Utilities": { "value": 10.8, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 12, "as_of": "2026-04-17" },
+      "Real Estate": { "value": 8.2, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 12, "as_of": "2026-04-17" },
+      "Communication Services": { "value": 18.0, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "Financials": { "value": 16.0, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "Consumer Discretionary": { "value": 15.0, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "Industrials": { "value": 14.0, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "Energy": { "value": 13.0, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "Materials": { "value": 12.0, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "Consumer Staples": { "value": 11.0, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" }
+    }
+  },
+  "bottom_up_eps": {
+    "cy_2026": { "value": 323.29, "unit": "usd", "source_tier": "tier_1_factset_insight", "source_page": 28, "as_of": "2026-04-17" },
+    "cy_2027": { "value": 376.32, "unit": "usd", "source_tier": "tier_1_factset_insight", "source_page": 28, "as_of": "2026-04-17" },
+    "quarterly": [
+      { "period": "Q3 2024", "eps": { "value": 62.78, "unit": "usd", "source_tier": "tier_1_factset_insight", "source_page": 29, "as_of": "2026-04-17" } },
+      { "period": "Q4 2024", "eps": { "value": 64.91, "unit": "usd", "source_tier": "tier_1_factset_insight", "source_page": 29, "as_of": "2026-04-17", "notes": "chart transcription" } },
+      { "period": "Q1 2025", "eps": { "value": 67.07, "unit": "usd", "source_tier": "tier_1_factset_insight", "source_page": 29, "as_of": "2026-04-17", "notes": "chart transcription" } },
+      { "period": "Q2 2025", "eps": { "value": 70.39, "unit": "usd", "source_tier": "tier_1_factset_insight", "source_page": 29, "as_of": "2026-04-17", "notes": "chart transcription" } },
+      { "period": "Q3 2025", "eps": { "value": 73.48, "unit": "usd", "source_tier": "tier_1_factset_insight", "source_page": 29, "as_of": "2026-04-17", "notes": "chart transcription" } },
+      { "period": "Q4 2025", "eps": { "value": 76.74, "unit": "usd", "source_tier": "tier_1_factset_insight", "source_page": 29, "as_of": "2026-04-17", "notes": "chart transcription" } },
+      { "period": "Q1 2026", "eps": { "value": 78.45, "unit": "usd", "source_tier": "tier_1_factset_insight", "source_page": 29, "as_of": "2026-04-17", "notes": "chart transcription" } },
+      { "period": "Q2 2026", "eps": { "value": 84.55, "unit": "usd", "source_tier": "tier_1_factset_insight", "source_page": 29, "as_of": "2026-04-17", "notes": "chart transcription" } },
+      { "period": "Q3 2026", "eps": { "value": 89.78, "unit": "usd", "source_tier": "tier_1_factset_insight", "source_page": 29, "as_of": "2026-04-17", "notes": "chart transcription" } },
+      { "period": "Q4 2026", "eps": { "value": 91.55, "unit": "usd", "source_tier": "tier_1_factset_insight", "source_page": 29, "as_of": "2026-04-17", "notes": "chart transcription" } },
+      { "period": "Q1 2027", "eps": { "value": 86.78, "unit": "usd", "source_tier": "tier_1_factset_insight", "source_page": 29, "as_of": "2026-04-17", "notes": "chart transcription" } },
+      { "period": "Q2 2027", "eps": { "value": 92.67, "unit": "usd", "source_tier": "tier_1_factset_insight", "source_page": 29, "as_of": "2026-04-17" } }
+    ]
+  },
+  "topic_of_the_week": {
+    "headline": "Excluding NVIDIA, \"Mag 7\" Companies Expected to Report Lower Earnings Growth Than Other 493",
+    "mag7_q1_2026_growth": { "value": 22.8, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 3, "as_of": "2026-04-17" },
+    "mag7_ex_nvda_q1_2026_growth": { "value": 6.4, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 3, "as_of": "2026-04-17" },
+    "other493_q1_2026_growth": { "value": 10.1, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 3, "as_of": "2026-04-17" },
+    "mag7_cy_2026_growth": { "value": 24.6, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 3, "as_of": "2026-04-17" },
+    "mag7_ex_nvda_cy_2026_growth": { "value": 13.2, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 3, "as_of": "2026-04-17" },
+    "other493_cy_2026_growth": { "value": 15.9, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 3, "as_of": "2026-04-17" }
+  },
+  "top_contributors": [
+    { "ticker": "SNDK", "company": "Sandisk", "contribution_pct_points": { "value": 14.25, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 4, "as_of": "2026-04-17" } },
+    { "ticker": "MU", "company": "Micron Technology", "contribution_pct_points": { "value": 12.20, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 4, "as_of": "2026-04-17" } },
+    { "ticker": "LLY", "company": "Eli Lilly", "contribution_pct_points": { "value": 6.96, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 4, "as_of": "2026-04-17" } },
+    { "ticker": "AVGO", "company": "Broadcom", "contribution_pct_points": { "value": 2.39, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 4, "as_of": "2026-04-17" } },
+    { "ticker": "NVDA", "company": "NVIDIA", "contribution_pct_points": { "value": 1.77, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 4, "as_of": "2026-04-17" } }
+  ],
+  "top_surprises": {
+    "top10": [
+      { "ticker": "NFLX", "company": "Netflix", "eps_surprise_pct": { "value": 61.2, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 17, "as_of": "2026-04-17" } },
+      { "ticker": "MU", "company": "Micron Technology", "eps_surprise_pct": { "value": 32.9, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 17, "as_of": "2026-04-17" } },
+      { "ticker": "FDX", "company": "FedEx", "eps_surprise_pct": { "value": 26.5, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 17, "as_of": "2026-04-17" } },
+      { "ticker": "NKE", "company": "Nike", "eps_surprise_pct": { "value": 20.4, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 17, "as_of": "2026-04-17" } },
+      { "ticker": "C", "company": "Citigroup", "eps_surprise_pct": { "value": 15.4, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 17, "as_of": "2026-04-17" } },
+      { "ticker": "BK", "company": "Bank of New York Mellon", "eps_surprise_pct": { "value": 14.0, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 17, "as_of": "2026-04-17" } },
+      { "ticker": "MS", "company": "Morgan Stanley", "eps_surprise_pct": { "value": 13.5, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 17, "as_of": "2026-04-17" } },
+      { "ticker": "MKC", "company": "McCormick", "eps_surprise_pct": { "value": 11.2, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 17, "as_of": "2026-04-17" } },
+      { "ticker": "STZ", "company": "Constellation Brands", "eps_surprise_pct": { "value": 10.8, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 17, "as_of": "2026-04-17" } },
+      { "ticker": "DAL", "company": "Delta Air Lines", "eps_surprise_pct": { "value": 10.4, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 17, "as_of": "2026-04-17" } }
+    ],
+    "bottom10": [
+      { "ticker": "COST", "company": "Costco", "eps_surprise_pct": { "value": 0.7, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 17, "as_of": "2026-04-17" } },
+      { "ticker": "PLD", "company": "Prologis", "eps_surprise_pct": { "value": 0.6, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 17, "as_of": "2026-04-17" } },
+      { "ticker": "ABT", "company": "Abbott", "eps_surprise_pct": { "value": 0.5, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 17, "as_of": "2026-04-17" } },
+      { "ticker": "FAST", "company": "Fastenal", "eps_surprise_pct": { "value": 0.4, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 17, "as_of": "2026-04-17" } },
+      { "ticker": "DRI", "company": "Darden Restaurants", "eps_surprise_pct": { "value": 0.2, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 17, "as_of": "2026-04-17" } },
+      { "ticker": "CTAS", "company": "Cintas", "eps_surprise_pct": { "value": 0.1, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 17, "as_of": "2026-04-17" } },
+      { "ticker": "LEN", "company": "Lennar", "eps_surprise_pct": { "value": -2.4, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 17, "as_of": "2026-04-17" } },
+      { "ticker": "CAG", "company": "Conagra", "eps_surprise_pct": { "value": -2.9, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 17, "as_of": "2026-04-17" } },
+      { "ticker": "PGR", "company": "Progressive", "eps_surprise_pct": { "value": -5.7, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 17, "as_of": "2026-04-17" } },
+      { "ticker": "GIS", "company": "General Mills", "eps_surprise_pct": { "value": -12.1, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 17, "as_of": "2026-04-17" } }
+    ]
+  },
+  "guidance_counts": {
+    "q2_2026_negative": { "value": 4, "unit": "count", "source_tier": "tier_1_factset_insight", "source_page": 12, "as_of": "2026-04-17" },
+    "q2_2026_positive": { "value": 3, "unit": "count", "source_tier": "tier_1_factset_insight", "source_page": 12, "as_of": "2026-04-17" },
+    "q2_2026_by_sector": {
+      "Consumer Discretionary": {
+        "negative": { "value": 2, "unit": "count", "source_tier": "tier_1_factset_insight", "source_page": 21, "as_of": "2026-04-17" },
+        "positive": { "value": 0, "unit": "count", "source_tier": "tier_1_factset_insight", "source_page": 21, "as_of": "2026-04-17" }
+      },
+      "Industrials": {
+        "negative": { "value": 1, "unit": "count", "source_tier": "tier_1_factset_insight", "source_page": 21, "as_of": "2026-04-17" },
+        "positive": { "value": 0, "unit": "count", "source_tier": "tier_1_factset_insight", "source_page": 21, "as_of": "2026-04-17" }
+      },
+      "Health Care": {
+        "negative": { "value": 1, "unit": "count", "source_tier": "tier_1_factset_insight", "source_page": 21, "as_of": "2026-04-17" },
+        "positive": { "value": 0, "unit": "count", "source_tier": "tier_1_factset_insight", "source_page": 21, "as_of": "2026-04-17" }
+      },
+      "Information Technology": {
+        "negative": { "value": 0, "unit": "count", "source_tier": "tier_1_factset_insight", "source_page": 21, "as_of": "2026-04-17" },
+        "positive": { "value": 3, "unit": "count", "source_tier": "tier_1_factset_insight", "source_page": 21, "as_of": "2026-04-17" }
+      }
+    },
+    "fy_total": { "value": 260, "unit": "count", "source_tier": "tier_1_factset_insight", "source_page": 12, "as_of": "2026-04-17" },
+    "fy_negative": { "value": 140, "unit": "count", "source_tier": "tier_1_factset_insight", "source_page": 12, "as_of": "2026-04-17" },
+    "fy_positive": { "value": 120, "unit": "count", "source_tier": "tier_1_factset_insight", "source_page": 12, "as_of": "2026-04-17" },
+    "pct_issuing_negative_q2": { "value": 57, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 12, "as_of": "2026-04-17" },
+    "pct_issuing_negative_q2_5yr_avg": { "value": 58, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 12, "as_of": "2026-04-17" },
+    "pct_issuing_negative_q2_10yr_avg": { "value": 60, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 12, "as_of": "2026-04-17" }
+  },
+  "upcoming_calendar": {
+    "companies_reporting_next_week": { "value": 93, "unit": "count", "source_tier": "tier_1_factset_insight", "source_page": 6, "as_of": "2026-04-17" },
+    "dow30_reporting_next_week": { "value": 7, "unit": "count", "source_tier": "tier_1_factset_insight", "source_page": 6, "as_of": "2026-04-17" }
+  },
+  "sector_metrics": [
+    {
+      "sector": "Information Technology",
+      "eps_growth_yoy_now": { "value": 45.1, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 9, "as_of": "2026-04-17" },
+      "eps_growth_yoy_mar31": { "value": 45.1, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 8, "as_of": "2026-03-31" },
+      "revenue_growth_yoy_now": { "value": 27.5, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 11, "as_of": "2026-04-17" },
+      "revenue_growth_yoy_mar31": null,
+      "net_profit_margin_q1_2026": { "value": 28.9, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 11, "as_of": "2026-04-17" },
+      "net_profit_margin_q1_2025": { "value": 25.4, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 11, "as_of": "2026-04-17" },
+      "net_profit_margin_5yr_avg": { "value": 25.0, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 11, "as_of": "2026-04-17" },
+      "forward_pe": { "value": 24.5, "unit": "ratio", "source_tier": "tier_1_factset_insight", "source_page": 30, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "forward_pe_5yr_avg": { "value": 22.0, "unit": "ratio", "source_tier": "tier_1_factset_insight", "source_page": 30, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "forward_pe_10yr_avg": { "value": 20.0, "unit": "ratio", "source_tier": "tier_1_factset_insight", "source_page": 31, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "us_revenue_pct": { "value": 58, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "international_revenue_pct": { "value": 42, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "pct_beat_eps": { "value": 100, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 6, "as_of": "2026-04-17" },
+      "pct_beat_revenue": { "value": 100, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 7, "as_of": "2026-04-17" },
+      "eps_surprise_pct_aggregate": { "value": 19.4, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 6, "as_of": "2026-04-17" },
+      "revenue_surprise_pct_aggregate": { "value": 7.2, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 7, "as_of": "2026-04-17" },
+      "pct_buy": { "value": 68, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 13, "as_of": "2026-04-17" },
+      "pct_hold": { "value": 27, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "pct_sell": { "value": 5, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "target_vs_close_pct": { "value": 23.4, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 12, "as_of": "2026-04-17" }
+    },
+    {
+      "sector": "Materials",
+      "eps_growth_yoy_now": { "value": 21.6, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 9, "as_of": "2026-04-17" },
+      "eps_growth_yoy_mar31": null,
+      "revenue_growth_yoy_now": { "value": 4.5, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 19, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "revenue_growth_yoy_mar31": null,
+      "net_profit_margin_q1_2026": { "value": 8.5, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 20, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "net_profit_margin_q1_2025": { "value": 7.8, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 20, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "net_profit_margin_5yr_avg": { "value": 9.2, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 20, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "forward_pe": { "value": 19.5, "unit": "ratio", "source_tier": "tier_1_factset_insight", "source_page": 30, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "forward_pe_5yr_avg": { "value": 17.0, "unit": "ratio", "source_tier": "tier_1_factset_insight", "source_page": 30, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "forward_pe_10yr_avg": { "value": 16.5, "unit": "ratio", "source_tier": "tier_1_factset_insight", "source_page": 31, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "us_revenue_pct": { "value": 50, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "international_revenue_pct": { "value": 50, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "pct_beat_eps": { "value": 100, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 6, "as_of": "2026-04-17" },
+      "pct_beat_revenue": { "value": 100, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 7, "as_of": "2026-04-17" },
+      "eps_surprise_pct_aggregate": null,
+      "revenue_surprise_pct_aggregate": null,
+      "pct_buy": { "value": 53, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "pct_hold": { "value": 42, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "pct_sell": { "value": 5, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "target_vs_close_pct": { "value": 12.0, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" }
+    },
+    {
+      "sector": "Financials",
+      "eps_growth_yoy_now": { "value": 19.7, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 8, "as_of": "2026-04-17" },
+      "eps_growth_yoy_mar31": { "value": 15.0, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 8, "as_of": "2026-03-31" },
+      "revenue_growth_yoy_now": { "value": 10.8, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 9, "as_of": "2026-04-17" },
+      "revenue_growth_yoy_mar31": { "value": 10.0, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 9, "as_of": "2026-03-31" },
+      "net_profit_margin_q1_2026": { "value": 17.2, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 20, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "net_profit_margin_q1_2025": { "value": 16.3, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 20, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "net_profit_margin_5yr_avg": { "value": 15.8, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 20, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "forward_pe": { "value": 15.0, "unit": "ratio", "source_tier": "tier_1_factset_insight", "source_page": 12, "as_of": "2026-04-17" },
+      "forward_pe_5yr_avg": { "value": 14.0, "unit": "ratio", "source_tier": "tier_1_factset_insight", "source_page": 30, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "forward_pe_10yr_avg": { "value": 13.5, "unit": "ratio", "source_tier": "tier_1_factset_insight", "source_page": 31, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "us_revenue_pct": { "value": 75, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "international_revenue_pct": { "value": 25, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "pct_beat_eps": { "value": 95, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 6, "as_of": "2026-04-17" },
+      "pct_beat_revenue": null,
+      "eps_surprise_pct_aggregate": { "value": 7.8, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 7, "as_of": "2026-04-17" },
+      "revenue_surprise_pct_aggregate": null,
+      "pct_buy": { "value": 57, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17" },
+      "pct_hold": { "value": 38, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "pct_sell": { "value": 5, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "target_vs_close_pct": { "value": 16.0, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" }
+    },
+    {
+      "sector": "Utilities",
+      "eps_growth_yoy_now": { "value": 10.1, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 10, "as_of": "2026-04-17" },
+      "eps_growth_yoy_mar31": null,
+      "revenue_growth_yoy_now": { "value": 5.5, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 19, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "revenue_growth_yoy_mar31": null,
+      "net_profit_margin_q1_2026": { "value": 14.0, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 20, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "net_profit_margin_q1_2025": { "value": 13.5, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 20, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "net_profit_margin_5yr_avg": { "value": 13.0, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 20, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "forward_pe": { "value": 18.0, "unit": "ratio", "source_tier": "tier_1_factset_insight", "source_page": 30, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "forward_pe_5yr_avg": { "value": 17.5, "unit": "ratio", "source_tier": "tier_1_factset_insight", "source_page": 30, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "forward_pe_10yr_avg": { "value": 17.0, "unit": "ratio", "source_tier": "tier_1_factset_insight", "source_page": 31, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "us_revenue_pct": { "value": 99, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "international_revenue_pct": { "value": 1, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "pct_beat_eps": null,
+      "pct_beat_revenue": null,
+      "eps_surprise_pct_aggregate": null,
+      "revenue_surprise_pct_aggregate": null,
+      "pct_buy": { "value": 48, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 13, "as_of": "2026-04-17" },
+      "pct_hold": { "value": 47, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "pct_sell": { "value": 5, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "target_vs_close_pct": { "value": 10.8, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 12, "as_of": "2026-04-17" }
+    },
+    {
+      "sector": "Communication Services",
+      "eps_growth_yoy_now": { "value": -0.7, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 8, "as_of": "2026-04-17" },
+      "eps_growth_yoy_mar31": { "value": -3.7, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 8, "as_of": "2026-03-31" },
+      "revenue_growth_yoy_now": { "value": 12.9, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 11, "as_of": "2026-04-17" },
+      "revenue_growth_yoy_mar31": null,
+      "net_profit_margin_q1_2026": { "value": 14.1, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 11, "as_of": "2026-04-17" },
+      "net_profit_margin_q1_2025": { "value": 16.0, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 11, "as_of": "2026-04-17" },
+      "net_profit_margin_5yr_avg": { "value": 14.5, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 20, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "forward_pe": { "value": 20.5, "unit": "ratio", "source_tier": "tier_1_factset_insight", "source_page": 30, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "forward_pe_5yr_avg": { "value": 19.0, "unit": "ratio", "source_tier": "tier_1_factset_insight", "source_page": 30, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "forward_pe_10yr_avg": { "value": 17.5, "unit": "ratio", "source_tier": "tier_1_factset_insight", "source_page": 31, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "us_revenue_pct": { "value": 80, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "international_revenue_pct": { "value": 20, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "pct_beat_eps": { "value": 100, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 6, "as_of": "2026-04-17" },
+      "pct_beat_revenue": { "value": 100, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 7, "as_of": "2026-04-17" },
+      "eps_surprise_pct_aggregate": { "value": 61.2, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 6, "as_of": "2026-04-17" },
+      "revenue_surprise_pct_aggregate": null,
+      "pct_buy": { "value": 65, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 13, "as_of": "2026-04-17" },
+      "pct_hold": { "value": 31, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "pct_sell": { "value": 4, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "target_vs_close_pct": { "value": 18.0, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" }
+    },
+    {
+      "sector": "Health Care",
+      "eps_growth_yoy_now": { "value": -10.5, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 8, "as_of": "2026-04-17" },
+      "eps_growth_yoy_mar31": { "value": -8.6, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 8, "as_of": "2026-03-31" },
+      "revenue_growth_yoy_now": { "value": 5.8, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 9, "as_of": "2026-04-17" },
+      "revenue_growth_yoy_mar31": { "value": 5.8, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 9, "as_of": "2026-03-31" },
+      "net_profit_margin_q1_2026": { "value": 8.5, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 20, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "net_profit_margin_q1_2025": { "value": 9.0, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 20, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "net_profit_margin_5yr_avg": { "value": 8.8, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 20, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "forward_pe": { "value": 17.5, "unit": "ratio", "source_tier": "tier_1_factset_insight", "source_page": 30, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "forward_pe_5yr_avg": { "value": 17.0, "unit": "ratio", "source_tier": "tier_1_factset_insight", "source_page": 30, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "forward_pe_10yr_avg": { "value": 16.5, "unit": "ratio", "source_tier": "tier_1_factset_insight", "source_page": 31, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "us_revenue_pct": { "value": 62, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "international_revenue_pct": { "value": 38, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "pct_beat_eps": { "value": 100, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 6, "as_of": "2026-04-17" },
+      "pct_beat_revenue": { "value": 100, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 7, "as_of": "2026-04-17" },
+      "eps_surprise_pct_aggregate": null,
+      "revenue_surprise_pct_aggregate": null,
+      "pct_buy": { "value": 63, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 13, "as_of": "2026-04-17" },
+      "pct_hold": { "value": 33, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "pct_sell": { "value": 4, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "target_vs_close_pct": { "value": 22.8, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 12, "as_of": "2026-04-17" }
+    },
+    {
+      "sector": "Energy",
+      "eps_growth_yoy_now": { "value": -13.1, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 8, "as_of": "2026-04-17" },
+      "eps_growth_yoy_mar31": { "value": 8.5, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 8, "as_of": "2026-03-31" },
+      "revenue_growth_yoy_now": { "value": 3.5, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 19, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "revenue_growth_yoy_mar31": null,
+      "net_profit_margin_q1_2026": { "value": 6.8, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 11, "as_of": "2026-04-17" },
+      "net_profit_margin_q1_2025": { "value": 8.4, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 20, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "net_profit_margin_5yr_avg": { "value": 9.7, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 11, "as_of": "2026-04-17" },
+      "forward_pe": { "value": 14.9, "unit": "ratio", "source_tier": "tier_1_factset_insight", "source_page": 12, "as_of": "2026-04-17" },
+      "forward_pe_5yr_avg": { "value": 12.0, "unit": "ratio", "source_tier": "tier_1_factset_insight", "source_page": 30, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "forward_pe_10yr_avg": { "value": 14.0, "unit": "ratio", "source_tier": "tier_1_factset_insight", "source_page": 31, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "us_revenue_pct": { "value": 56, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "international_revenue_pct": { "value": 44, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "pct_beat_eps": null,
+      "pct_beat_revenue": null,
+      "eps_surprise_pct_aggregate": null,
+      "revenue_surprise_pct_aggregate": null,
+      "pct_buy": { "value": 55, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "pct_hold": { "value": 40, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "pct_sell": { "value": 5, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "target_vs_close_pct": { "value": 13.0, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" }
+    },
+    {
+      "sector": "Consumer Discretionary",
+      "eps_growth_yoy_now": { "value": 5.0, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 18, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "eps_growth_yoy_mar31": null,
+      "revenue_growth_yoy_now": { "value": 8.2, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 9, "as_of": "2026-04-17" },
+      "revenue_growth_yoy_mar31": { "value": 8.5, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 9, "as_of": "2026-03-31" },
+      "net_profit_margin_q1_2026": { "value": 7.8, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 20, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "net_profit_margin_q1_2025": { "value": 8.0, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 20, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "net_profit_margin_5yr_avg": { "value": 7.5, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 20, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "forward_pe": { "value": 28.2, "unit": "ratio", "source_tier": "tier_1_factset_insight", "source_page": 12, "as_of": "2026-04-17" },
+      "forward_pe_5yr_avg": { "value": 26.0, "unit": "ratio", "source_tier": "tier_1_factset_insight", "source_page": 30, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "forward_pe_10yr_avg": { "value": 23.0, "unit": "ratio", "source_tier": "tier_1_factset_insight", "source_page": 31, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "us_revenue_pct": { "value": 67, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "international_revenue_pct": { "value": 33, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "pct_beat_eps": null,
+      "pct_beat_revenue": { "value": 60, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 7, "as_of": "2026-04-17" },
+      "eps_surprise_pct_aggregate": null,
+      "revenue_surprise_pct_aggregate": { "value": -0.5, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 7, "as_of": "2026-04-17" },
+      "pct_buy": { "value": 56, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "pct_hold": { "value": 39, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "pct_sell": { "value": 5, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "target_vs_close_pct": { "value": 15.0, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" }
+    },
+    {
+      "sector": "Consumer Staples",
+      "eps_growth_yoy_now": { "value": 2.5, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 18, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "eps_growth_yoy_mar31": null,
+      "revenue_growth_yoy_now": { "value": 3.5, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 19, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "revenue_growth_yoy_mar31": null,
+      "net_profit_margin_q1_2026": { "value": 6.5, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 20, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "net_profit_margin_q1_2025": { "value": 6.6, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 20, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "net_profit_margin_5yr_avg": { "value": 6.8, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 20, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "forward_pe": { "value": 21.5, "unit": "ratio", "source_tier": "tier_1_factset_insight", "source_page": 30, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "forward_pe_5yr_avg": { "value": 20.5, "unit": "ratio", "source_tier": "tier_1_factset_insight", "source_page": 30, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "forward_pe_10yr_avg": { "value": 20.0, "unit": "ratio", "source_tier": "tier_1_factset_insight", "source_page": 31, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "us_revenue_pct": { "value": 67, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "international_revenue_pct": { "value": 33, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "pct_beat_eps": { "value": 67, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 6, "as_of": "2026-04-17" },
+      "pct_beat_revenue": { "value": 100, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 7, "as_of": "2026-04-17" },
+      "eps_surprise_pct_aggregate": null,
+      "revenue_surprise_pct_aggregate": null,
+      "pct_buy": { "value": 43, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 13, "as_of": "2026-04-17" },
+      "pct_hold": { "value": 50, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "pct_sell": { "value": 7, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "target_vs_close_pct": { "value": 11.0, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" }
+    },
+    {
+      "sector": "Industrials",
+      "eps_growth_yoy_now": { "value": 4.0, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 18, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "eps_growth_yoy_mar31": null,
+      "revenue_growth_yoy_now": { "value": 4.5, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 19, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "revenue_growth_yoy_mar31": null,
+      "net_profit_margin_q1_2026": { "value": 10.5, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 20, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "net_profit_margin_q1_2025": { "value": 10.3, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 20, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "net_profit_margin_5yr_avg": { "value": 9.8, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 20, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "forward_pe": { "value": 25.8, "unit": "ratio", "source_tier": "tier_1_factset_insight", "source_page": 12, "as_of": "2026-04-17" },
+      "forward_pe_5yr_avg": { "value": 22.5, "unit": "ratio", "source_tier": "tier_1_factset_insight", "source_page": 30, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "forward_pe_10yr_avg": { "value": 20.0, "unit": "ratio", "source_tier": "tier_1_factset_insight", "source_page": 31, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "us_revenue_pct": { "value": 71, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "international_revenue_pct": { "value": 29, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "pct_beat_eps": { "value": 67, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 6, "as_of": "2026-04-17" },
+      "pct_beat_revenue": { "value": 100, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 7, "as_of": "2026-04-17" },
+      "eps_surprise_pct_aggregate": { "value": 10.9, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 6, "as_of": "2026-04-17" },
+      "revenue_surprise_pct_aggregate": null,
+      "pct_buy": { "value": 54, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "pct_hold": { "value": 41, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "pct_sell": { "value": 5, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "target_vs_close_pct": { "value": 14.0, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" }
+    },
+    {
+      "sector": "Real Estate",
+      "eps_growth_yoy_now": { "value": 3.5, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 18, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "eps_growth_yoy_mar31": null,
+      "revenue_growth_yoy_now": { "value": 5.0, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 19, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "revenue_growth_yoy_mar31": null,
+      "net_profit_margin_q1_2026": { "value": 36.0, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 20, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "net_profit_margin_q1_2025": { "value": 35.5, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 20, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "net_profit_margin_5yr_avg": { "value": 33.0, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 20, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "forward_pe": { "value": 18.5, "unit": "ratio", "source_tier": "tier_1_factset_insight", "source_page": 30, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "forward_pe_5yr_avg": { "value": 18.0, "unit": "ratio", "source_tier": "tier_1_factset_insight", "source_page": 30, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "forward_pe_10yr_avg": { "value": 17.5, "unit": "ratio", "source_tier": "tier_1_factset_insight", "source_page": 31, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "us_revenue_pct": { "value": 85, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "international_revenue_pct": { "value": 15, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 27, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "pct_beat_eps": { "value": 100, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 6, "as_of": "2026-04-17" },
+      "pct_beat_revenue": { "value": 100, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 7, "as_of": "2026-04-17" },
+      "eps_surprise_pct_aggregate": null,
+      "revenue_surprise_pct_aggregate": null,
+      "pct_buy": { "value": 52, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "pct_hold": { "value": 43, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "pct_sell": { "value": 5, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 33, "as_of": "2026-04-17", "notes": "chart transcription" },
+      "target_vs_close_pct": { "value": 8.2, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 12, "as_of": "2026-04-17" }
+    }
+  ]
+}

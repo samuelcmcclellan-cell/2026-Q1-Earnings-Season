@@ -2143,5 +2143,148 @@
     "market_cap_category": "large",
     "index_membership": "Ibovespa",
     "style": "blend"
+  },
+  {
+    "ticker": "BK",
+    "name": "Bank of New York Mellon",
+    "sector": "Financials",
+    "industry": "Capital Markets",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500",
+    "style": "value"
+  },
+  {
+    "ticker": "MKC",
+    "name": "McCormick & Company",
+    "sector": "Consumer Staples",
+    "industry": "Packaged Foods & Meats",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "mid",
+    "index_membership": "S&P 500",
+    "style": "blend"
+  },
+  {
+    "ticker": "STZ",
+    "name": "Constellation Brands",
+    "sector": "Consumer Staples",
+    "industry": "Distillers & Vintners",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "mid",
+    "index_membership": "S&P 500",
+    "style": "blend"
+  },
+  {
+    "ticker": "DAL",
+    "name": "Delta Air Lines",
+    "sector": "Industrials",
+    "industry": "Airlines",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "mid",
+    "index_membership": "S&P 500",
+    "style": "value"
+  },
+  {
+    "ticker": "TRV",
+    "name": "Travelers Companies",
+    "sector": "Financials",
+    "industry": "Property & Casualty Insurance",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500",
+    "style": "value"
+  },
+  {
+    "ticker": "SNDK",
+    "name": "Sandisk",
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "mid",
+    "index_membership": "S&P 500",
+    "style": "growth"
+  },
+  {
+    "ticker": "GIS",
+    "name": "General Mills",
+    "sector": "Consumer Staples",
+    "industry": "Packaged Foods & Meats",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500",
+    "style": "value"
+  },
+  {
+    "ticker": "PGR",
+    "name": "Progressive",
+    "sector": "Financials",
+    "industry": "Property & Casualty Insurance",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500",
+    "style": "blend"
+  },
+  {
+    "ticker": "CAG",
+    "name": "Conagra Brands",
+    "sector": "Consumer Staples",
+    "industry": "Packaged Foods & Meats",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "mid",
+    "index_membership": "S&P 500",
+    "style": "value"
+  },
+  {
+    "ticker": "LEN",
+    "name": "Lennar",
+    "sector": "Consumer Discretionary",
+    "industry": "Homebuilding",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500",
+    "style": "value"
+  },
+  {
+    "ticker": "CTAS",
+    "name": "Cintas",
+    "sector": "Industrials",
+    "industry": "Commercial Services & Supplies",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "large",
+    "index_membership": "S&P 500",
+    "style": "growth"
+  },
+  {
+    "ticker": "DRI",
+    "name": "Darden Restaurants",
+    "sector": "Consumer Discretionary",
+    "industry": "Hotels Restaurants & Leisure",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "mid",
+    "index_membership": "S&P 500",
+    "style": "blend"
+  },
+  {
+    "ticker": "FAST",
+    "name": "Fastenal",
+    "sector": "Industrials",
+    "industry": "Trading Companies & Distributors",
+    "region": "us",
+    "country": "US",
+    "market_cap_category": "mid",
+    "index_membership": "S&P 500",
+    "style": "growth"
   }
 ]

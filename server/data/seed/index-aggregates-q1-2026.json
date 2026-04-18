@@ -1,0 +1,23 @@
+{
+  "quarter": "Q1 2026",
+  "report_date": "2026-04-17",
+  "source_file": "EarningsInsight_041726.pdf",
+  "aggregates": {
+    "blended_eps_growth_yoy": { "value": 13.2, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 1, "as_of": "2026-04-17" },
+    "blended_revenue_growth_yoy": { "value": 9.9, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 1, "as_of": "2026-04-17" },
+    "pct_reporting": { "value": 10.0, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 5, "as_of": "2026-04-17" },
+    "pct_beat_eps": { "value": 88, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 5, "as_of": "2026-04-17" },
+    "pct_beat_revenue": { "value": 84, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 5, "as_of": "2026-04-17" },
+    "eps_surprise_pct_aggregate": { "value": 10.8, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 6, "as_of": "2026-04-17" },
+    "revenue_surprise_pct_aggregate": { "value": 2.0, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 7, "as_of": "2026-04-17" },
+    "net_profit_margin": { "value": 13.2, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 11, "as_of": "2026-04-17" },
+    "forward_pe_12m": { "value": 20.9, "unit": "ratio", "source_tier": "tier_1_factset_insight", "source_page": 6, "as_of": "2026-04-17" },
+    "forward_pe_5yr_avg": { "value": 19.9, "unit": "ratio", "source_tier": "tier_1_factset_insight", "source_page": 1, "as_of": "2026-04-17" },
+    "forward_pe_10yr_avg": { "value": 18.9, "unit": "ratio", "source_tier": "tier_1_factset_insight", "source_page": 1, "as_of": "2026-04-17" },
+    "trailing_pe_12m": { "value": 27.8, "unit": "ratio", "source_tier": "tier_1_factset_insight", "source_page": 12, "as_of": "2026-04-17" },
+    "bottom_up_target_price": { "value": 8325.60, "unit": "usd", "source_tier": "tier_1_factset_insight", "source_page": 12, "as_of": "2026-04-17" },
+    "upside_vs_closing_pct": { "value": 18.2, "unit": "pct", "source_tier": "tier_1_factset_insight", "source_page": 12, "as_of": "2026-04-17" },
+    "companies_reporting_next_week": { "value": 93, "unit": "count", "source_tier": "tier_1_factset_insight", "source_page": 6, "as_of": "2026-04-17" },
+    "consecutive_quarters_double_digit_growth": { "value": 6, "unit": "count", "source_tier": "tier_1_factset_insight", "source_page": 1, "as_of": "2026-04-17" }
+  }
+}
