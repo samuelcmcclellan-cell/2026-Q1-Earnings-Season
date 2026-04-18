@@ -11,6 +11,9 @@
     "seed": "npm run seed -w server",
     "ingest": "node --experimental-transform-types scripts/ingest-csv.ts",
     "refresh": "node --experimental-transform-types scripts/refresh-data.ts",
+    "ingest-pdf": "node scripts/ingest-factset-pdf.mjs",
+    "reconcile-seed": "node scripts/reconcile-seed.mjs",
+    "refresh-from-pdf": "npm run ingest-pdf && npm run reconcile-seed",
     "validate-seed": "node scripts/validate-seed.mjs"
   },
   "devDependencies": {
